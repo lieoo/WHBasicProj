@@ -27,7 +27,7 @@
                                    kImgKey    : @"TabMessageIcon",
                                    kSelImgKey : @"TabMessageIcon"},
                                  
-                                 @{kClassKey  : @"RoomListViewController",
+                                 @{kClassKey  : @"WHProFileViewController",
                                    kTitleKey  : @"我的",
                                    kImgKey    : @"profile-group-icon",
                                    kSelImgKey : @"profile-group-icon"}
