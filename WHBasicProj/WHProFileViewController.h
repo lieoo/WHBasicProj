@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  WHProFileViewController.h
 //  WHBasicProj
 //
 //  Created by 行政 on 17/4/27.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface WHProFileViewController : UIViewController
 
 @end
-

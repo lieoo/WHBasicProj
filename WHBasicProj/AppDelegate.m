@@ -12,6 +12,8 @@
 #import "AppDelegate+UMengMobClick.h"
 #import "WHTabBarController.h"
 #import "WHNewsViewController.h"
+#import "PXGetDataTool.h"
+#import "webViewTabBarController.h"
 
 @interface AppDelegate ()
 
@@ -31,12 +33,12 @@
     [AppDelegate addUmengMessage:launchOptions WithDelegate:self];
     [AppDelegate addUMMobClick]; //统计
     
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyWindow];
     return YES;
 }
 
-
-
-#pragma mark -没有网
+#pragma mark --- 网络状态
 - (void)noNetWork{
     ScottAlertView *alertView = [ScottAlertView alertViewWithTitle:@"网络断开连接" message:@"请检查网络或者蜂窝网络使用权限"];
     [alertView addAction:[ScottAlertAction actionWithTitle:@"取消" style:ScottAlertActionStyleCancel handler:^(ScottAlertAction *action) {
@@ -49,32 +51,54 @@
     
     _alertCon = [ScottAlertViewController alertControllerWithAlertView:alertView preferredStyle:ScottAlertControllerStyleAlert transitionAnimationStyle:ScottAlertTransitionStyleDropDown];
     _alertCon.tapBackgroundDismissEnable = YES;
-    [self.window.rootViewController presentViewController:_alertCon animated:YES completion:nil];}
-- (void)celluarNetOnline{
-    
-}
+    [self.window.rootViewController presentViewController:_alertCon animated:YES completion:nil];
 
-- (void)wifiOnline{
+}
+-(void)wifiOnline{
+    [self canOnlineWithType:@"wifi环境已经连接"];
+}
+-(void)celluarNetOnline{
+    [self canOnlineWithType:@"蜂窝数据环境已经连接"];
+}
+-(void)canOnlineWithType:(NSString *)typeString{
     [_alertCon dismissViewControllerAnimated:YES];
     if (![[self getCurrentVC] isKindOfClass:[WHTabBarController class]]) {
         [self addRootViewController];
-    }else
-    {   [_alertCon dismissViewControllerAnimated:YES completion:^{
-        
-    }];
-        [KVNProgress showSuccessWithStatus:@"wifi环境已经连接"];
+    }else{
+        [_alertCon dismissViewControllerAnimated:YES completion:nil];
+        [KVNProgress showSuccessWithStatus:typeString];
     }
 }
 -(void)addRootViewController{
-    self.window.rootViewController = [[WHNewsViewController alloc] init];
+    
+    WKProgressHUD *hud = [WKProgressHUD showInView:[UIApplication sharedApplication].keyWindow withText:@"等待加载" animated:YES];
+    [PXGetDataTool opinionSwitchisOn:COMPANYURL parameters:COMPANYPARA progress:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+        
+        NSLog(@"%@",responseObject);
+        if (responseObject == NULL) {
+            WHTabBarController *vc = [[WHTabBarController alloc]init];
+            self.window.rootViewController = vc;
+        } else {
+            NSUserDefaults *de = [NSUserDefaults standardUserDefaults];
+            [de setObject:responseObject[@"data"] forKey:@"responseObject"];
+            [de synchronize];
+            webViewTabBarController *web=[[webViewTabBarController alloc] init];
+            [[UIApplication sharedApplication].delegate window].rootViewController = web;
+        }
+        [hud dismiss:YES];
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        [hud dismiss:YES];
+        [[UIApplication sharedApplication].delegate window].rootViewController =[[WHTabBarController alloc] init];
+    }];
+    
 }
 -(void)exitApp{
     [UIView beginAnimations:@"exitApplication" context:nil];
     [UIView setAnimationDuration:0.5];
     [UIView setAnimationDelegate:self];
-    // [UIView setAnimationTransition:UIViewAnimationCurveEaseOut forView:self.view.window cache:NO];
+//     [UIView setAnimationTransition:UIViewAnimationCurveEaseOut forView:[UIApplication sharedApplication].keyWindow cache:NO];
     UIWindow *window = [[UIApplication sharedApplication].delegate window];
-    [UIView setAnimationTransition:UIViewAnimationCurveEaseOut forView:window cache:NO];
+//    [UIView setAnimationTransition:UIViewAnimationCurveEaseOut forView:window cache:NO];
     [UIView setAnimationDidStopSelector:@selector(animationFinished:finished:context:)];
     window.bounds = CGRectMake(0, 0, 0, 0);
     [UIView commitAnimations];
@@ -148,11 +172,6 @@
         //应用处于后台时的本地推送接受
     }
     
-}
-
--(void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
-{
-//    NSLog(@"%@",[[[[deviceToken description] stringByReplacingOccurrencesOfString: @"<" withString: @""]                  stringByReplacingOccurrencesOfString: @">" withString: @""]                 stringByReplacingOccurrencesOfString: @" " withString: @""]);
 }
 
 @end

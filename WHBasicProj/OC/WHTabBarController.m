@@ -22,25 +22,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSArray *childItemsArray = @[
-                                 @{kClassKey  : @"MsgViewController",
-                                   kTitleKey  : @"消息",
+                                 @{kClassKey  : @"WHNewsViewController",
+                                   kTitleKey  : @"资讯",
                                    kImgKey    : @"TabMessageIcon",
                                    kSelImgKey : @"TabMessageIcon"},
                                  
                                  @{kClassKey  : @"RoomListViewController",
-                                   kTitleKey  : @"群聊",
+                                   kTitleKey  : @"我的",
                                    kImgKey    : @"profile-group-icon",
-                                   kSelImgKey : @"profile-group-icon"},
-                                 
-                                 @{kClassKey  : @"VCFriends",
-                                   kTitleKey  : @"好友",
-                                   kImgKey    : @"TabFriendIcon",
-                                   kSelImgKey : @"TabFriendIcon"},
-                                 
-                                 @{kClassKey  : @"VCMine",
-                                   kTitleKey  : @"我",
-                                   kImgKey    : @"TabMeIcon",
-                                   kSelImgKey : @"TabMeIcon"}];
+                                   kSelImgKey : @"profile-group-icon"}
+                                 ];
+    
     
     [childItemsArray enumerateObjectsUsingBlock:^(NSDictionary *dict, NSUInteger idx, BOOL *stop) {
         UIViewController *vc = [NSClassFromString(dict[kClassKey]) new];
