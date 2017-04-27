@@ -7,45 +7,152 @@
 //
 
 #import "AppDelegate.h"
+#import "AppDelegate+UMengMessage.h"
+#import "AppDelegate+Reachability.h"
+#import "AppDelegate+UMengMobClick.h"
+#import "WHTabBarController.h"
+#import "WHNewsViewController.h"
 
 @interface AppDelegate ()
 
-@end
+@property (nonatomic,strong) ScottAlertViewController *alertCon;
 
+@end
 @implementation AppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(noNetWork) name:WHNONETWORKNOTICESTRING object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(wifiOnline) name:WHWIFINETWORKIONLINENOTICESTRING object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(celluarNetOnline) name:WHCELLUARNETWORKONLINENOTICESTRING object:nil];
+    
+    [AppDelegate reachabilityWithContrller:self];
+    [AppDelegate addUmengMessage:launchOptions WithDelegate:self];
+    [AppDelegate addUMMobClick]; //统计
+    
     return YES;
 }
 
 
-- (void)applicationWillResignActive:(UIApplication *)application {
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
+
+#pragma mark -没有网
+- (void)noNetWork{
+    ScottAlertView *alertView = [ScottAlertView alertViewWithTitle:@"网络断开连接" message:@"请检查网络或者蜂窝网络使用权限"];
+    [alertView addAction:[ScottAlertAction actionWithTitle:@"取消" style:ScottAlertActionStyleCancel handler:^(ScottAlertAction *action) {
+        
+    }]];
+    
+    [alertView addAction:[ScottAlertAction actionWithTitle:@"点击退出" style:ScottAlertActionStyleDestructive handler:^(ScottAlertAction *action) {
+        [self exitApp];
+    }]];
+    
+    _alertCon = [ScottAlertViewController alertControllerWithAlertView:alertView preferredStyle:ScottAlertControllerStyleAlert transitionAnimationStyle:ScottAlertTransitionStyleDropDown];
+    _alertCon.tapBackgroundDismissEnable = YES;
+    [self.window.rootViewController presentViewController:_alertCon animated:YES completion:nil];}
+- (void)celluarNetOnline{
+    
 }
 
-
-- (void)applicationDidEnterBackground:(UIApplication *)application {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+- (void)wifiOnline{
+    [_alertCon dismissViewControllerAnimated:YES];
+    if (![[self getCurrentVC] isKindOfClass:[WHTabBarController class]]) {
+        [self addRootViewController];
+    }else
+    {   [_alertCon dismissViewControllerAnimated:YES completion:^{
+        
+    }];
+        [KVNProgress showSuccessWithStatus:@"wifi环境已经连接"];
+    }
+}
+-(void)addRootViewController{
+    self.window.rootViewController = [[WHNewsViewController alloc] init];
+}
+-(void)exitApp{
+    [UIView beginAnimations:@"exitApplication" context:nil];
+    [UIView setAnimationDuration:0.5];
+    [UIView setAnimationDelegate:self];
+    // [UIView setAnimationTransition:UIViewAnimationCurveEaseOut forView:self.view.window cache:NO];
+    UIWindow *window = [[UIApplication sharedApplication].delegate window];
+    [UIView setAnimationTransition:UIViewAnimationCurveEaseOut forView:window cache:NO];
+    [UIView setAnimationDidStopSelector:@selector(animationFinished:finished:context:)];
+    window.bounds = CGRectMake(0, 0, 0, 0);
+    [UIView commitAnimations];
 }
 
-
-- (void)applicationWillEnterForeground:(UIApplication *)application {
-    // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+- (void)animationFinished:(NSString *)animationID finished:(NSNumber *)finished context:(void *)context {
+    if ([animationID compare:@"exitApplication"] == 0) {
+        exit(0);
+    }
 }
 
-
-- (void)applicationDidBecomeActive:(UIApplication *)application {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+#pragma mark -获取当前显示的界面
+//获取当前屏幕显示的viewcontroller
+- (UIViewController *)getCurrentVC{
+    UIViewController *result = nil;
+    UIWindow * window = [[UIApplication sharedApplication] keyWindow];
+    if (window.windowLevel != UIWindowLevelNormal)
+    {
+        NSArray *windows = [[UIApplication sharedApplication] windows];
+        for(UIWindow * tmpWin in windows)
+        {
+            if (tmpWin.windowLevel == UIWindowLevelNormal)
+            {
+                window = tmpWin;
+                break;
+            }
+        }
+    }
+    
+    UIView *frontView = [[window subviews] objectAtIndex:0];
+    id nextResponder = [frontView nextResponder];
+    
+    if ([nextResponder isKindOfClass:[UIViewController class]])
+        result = nextResponder;
+    else
+        result = window.rootViewController;
+    
+    return result;
 }
 
-
-- (void)applicationWillTerminate:(UIApplication *)application {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+//iOS10新增：处理前台收到通知的代理方法
+-(void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions))completionHandler{
+    NSDictionary * userInfo = notification.request.content.userInfo;
+    if([notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
+        [UMessage setAutoAlert:NO];
+        //应用处于前台时的远程推送接受
+        //必须加这句代码
+        [UMessage didReceiveRemoteNotification:userInfo];
+        
+        NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+        [ud setObject:[NSString stringWithFormat:@"%@",userInfo] forKey:@"UMPuserInfoNotification"];
+        
+    }else{
+        //应用处于前台时的本地推送接受
+    }
+    completionHandler(UNNotificationPresentationOptionSound|UNNotificationPresentationOptionBadge|UNNotificationPresentationOptionAlert);
 }
 
+//iOS10新增：处理后台点击通知的代理方法
+-(void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)())completionHandler{
+    NSDictionary * userInfo = response.notification.request.content.userInfo;
+    if([response.notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
+        //应用处于后台时的远程推送接受
+        //必须加这句代码
+        [UMessage didReceiveRemoteNotification:userInfo];
+        
+        NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+        [ud setObject:[NSString stringWithFormat:@"%@",userInfo] forKey:@"UMPuserInfoNotification"];
+        
+    }else{
+        //应用处于后台时的本地推送接受
+    }
+    
+}
+
+-(void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+{
+//    NSLog(@"%@",[[[[deviceToken description] stringByReplacingOccurrencesOfString: @"<" withString: @""]                  stringByReplacingOccurrencesOfString: @">" withString: @""]                 stringByReplacingOccurrencesOfString: @" " withString: @""]);
+}
 
 @end

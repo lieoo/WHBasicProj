@@ -12,4 +12,8 @@ pod 'MJExtension'
 pod 'MJRefresh'
 pod 'MBProgressHUD'
 pod 'IQKeyboardManager'
+pod 'Masonry'
+pod 'UMengAnalytics-NO-IDFA'
+pod 'UMessage'
+pod 'KVNProgress'
 end

@@ -15,29 +15,41 @@ PODS:
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
   - IQKeyboardManager (4.0.9)
+  - KVNProgress (2.3.1)
+  - Masonry (1.0.2)
   - MBProgressHUD (1.0.0)
   - MJExtension (3.0.13)
   - MJRefresh (3.1.12)
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
+  - UMengAnalytics-NO-IDFA (4.2.5)
+  - UMessage (1.4.0)
 
 DEPENDENCIES:
   - AFNetworking
   - IQKeyboardManager
+  - KVNProgress
+  - Masonry
   - MBProgressHUD
   - MJExtension
   - MJRefresh
   - SDWebImage
+  - UMengAnalytics-NO-IDFA
+  - UMessage
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   IQKeyboardManager: 322c7405df3eb5f7e50dede32ea937bf3d4364e0
+  KVNProgress: 8167b1f19e2758290c0b6143020ed9dcbb0477a1
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
+  UMengAnalytics-NO-IDFA: 16666e32edce5be44ae5b14aaaa7f3582e09d6ab
+  UMessage: f1619a28fdf03190050a67280e181dd422a980dc
 
-PODFILE CHECKSUM: 35f541643077762e264d61b0ca481eceeb650793
+PODFILE CHECKSUM: 6c7c065a9756558ee12c371ee1f43a25fc7b970d
 
 COCOAPODS: 1.2.1

@@ -14,6 +14,20 @@
 		D170AE791EB1B2B8003668C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D170AE771EB1B2B8003668C0 /* Main.storyboard */; };
 		D170AE7B1EB1B2B8003668C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D170AE7A1EB1B2B8003668C0 /* Assets.xcassets */; };
 		D170AE7E1EB1B2B8003668C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D170AE7C1EB1B2B8003668C0 /* LaunchScreen.storyboard */; };
+		D170AE8C1EB1BCBE003668C0 /* WHTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D170AE8B1EB1BCBE003668C0 /* WHTabBarController.m */; };
+		D170AE8F1EB1BDFE003668C0 /* AppDelegate+UMengMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = D170AE8E1EB1BDFE003668C0 /* AppDelegate+UMengMessage.m */; };
+		D170AE921EB1C2CC003668C0 /* AppDelegate+Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = D170AE911EB1C2CC003668C0 /* AppDelegate+Reachability.m */; };
+		D170AE951EB1C5AF003668C0 /* AppDelegate+UMengMobClick.m in Sources */ = {isa = PBXBuildFile; fileRef = D170AE941EB1C5AF003668C0 /* AppDelegate+UMengMobClick.m */; };
+		D170AE981EB1CE1D003668C0 /* WHNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D170AE971EB1CE1D003668C0 /* WHNewsViewController.m */; };
+		D170AEB01EB1D1D2003668C0 /* ScottBaseAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = D170AE9D1EB1D1D2003668C0 /* ScottBaseAnimation.m */; };
+		D170AEB11EB1D1D2003668C0 /* ScottDropDownAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = D170AE9F1EB1D1D2003668C0 /* ScottDropDownAnimation.m */; };
+		D170AEB21EB1D1D2003668C0 /* ScottFadeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = D170AEA11EB1D1D2003668C0 /* ScottFadeAnimation.m */; };
+		D170AEB31EB1D1D2003668C0 /* ScottScaleFadeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = D170AEA31EB1D1D2003668C0 /* ScottScaleFadeAnimation.m */; };
+		D170AEB41EB1D1D2003668C0 /* ScottAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = D170AEA71EB1D1D2003668C0 /* ScottAlertView.m */; };
+		D170AEB51EB1D1D2003668C0 /* ScottShowAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = D170AEA91EB1D1D2003668C0 /* ScottShowAlertView.m */; };
+		D170AEB61EB1D1D2003668C0 /* UIView+ScottAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = D170AEAB1EB1D1D2003668C0 /* UIView+ScottAlertView.m */; };
+		D170AEB71EB1D1D2003668C0 /* UIView+ScottAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D170AEAD1EB1D1D2003668C0 /* UIView+ScottAutoLayout.m */; };
+		D170AEB81EB1D1D2003668C0 /* ScottAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D170AEAF1EB1D1D2003668C0 /* ScottAlertViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +44,36 @@
 		D170AE7A1EB1B2B8003668C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D170AE7D1EB1B2B8003668C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D170AE7F1EB1B2B8003668C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D170AE881EB1B8A6003668C0 /* WHProjHeaderPCH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHProjHeaderPCH.h; sourceTree = "<group>"; };
+		D170AE8A1EB1BCBE003668C0 /* WHTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHTabBarController.h; sourceTree = "<group>"; };
+		D170AE8B1EB1BCBE003668C0 /* WHTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHTabBarController.m; sourceTree = "<group>"; };
+		D170AE8D1EB1BDFE003668C0 /* AppDelegate+UMengMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+UMengMessage.h"; sourceTree = "<group>"; };
+		D170AE8E1EB1BDFE003668C0 /* AppDelegate+UMengMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+UMengMessage.m"; sourceTree = "<group>"; };
+		D170AE901EB1C2CC003668C0 /* AppDelegate+Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Reachability.h"; sourceTree = "<group>"; };
+		D170AE911EB1C2CC003668C0 /* AppDelegate+Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Reachability.m"; sourceTree = "<group>"; };
+		D170AE931EB1C5AF003668C0 /* AppDelegate+UMengMobClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+UMengMobClick.h"; sourceTree = "<group>"; };
+		D170AE941EB1C5AF003668C0 /* AppDelegate+UMengMobClick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+UMengMobClick.m"; sourceTree = "<group>"; };
+		D170AE961EB1CE1D003668C0 /* WHNewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHNewsViewController.h; sourceTree = "<group>"; };
+		D170AE971EB1CE1D003668C0 /* WHNewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHNewsViewController.m; sourceTree = "<group>"; };
+		D170AE9C1EB1D1D2003668C0 /* ScottBaseAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScottBaseAnimation.h; sourceTree = "<group>"; };
+		D170AE9D1EB1D1D2003668C0 /* ScottBaseAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScottBaseAnimation.m; sourceTree = "<group>"; };
+		D170AE9E1EB1D1D2003668C0 /* ScottDropDownAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScottDropDownAnimation.h; sourceTree = "<group>"; };
+		D170AE9F1EB1D1D2003668C0 /* ScottDropDownAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScottDropDownAnimation.m; sourceTree = "<group>"; };
+		D170AEA01EB1D1D2003668C0 /* ScottFadeAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScottFadeAnimation.h; sourceTree = "<group>"; };
+		D170AEA11EB1D1D2003668C0 /* ScottFadeAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScottFadeAnimation.m; sourceTree = "<group>"; };
+		D170AEA21EB1D1D2003668C0 /* ScottScaleFadeAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScottScaleFadeAnimation.h; sourceTree = "<group>"; };
+		D170AEA31EB1D1D2003668C0 /* ScottScaleFadeAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScottScaleFadeAnimation.m; sourceTree = "<group>"; };
+		D170AEA41EB1D1D2003668C0 /* ScottAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScottAlertController.h; sourceTree = "<group>"; };
+		D170AEA61EB1D1D2003668C0 /* ScottAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScottAlertView.h; sourceTree = "<group>"; };
+		D170AEA71EB1D1D2003668C0 /* ScottAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScottAlertView.m; sourceTree = "<group>"; };
+		D170AEA81EB1D1D2003668C0 /* ScottShowAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScottShowAlertView.h; sourceTree = "<group>"; };
+		D170AEA91EB1D1D2003668C0 /* ScottShowAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScottShowAlertView.m; sourceTree = "<group>"; };
+		D170AEAA1EB1D1D2003668C0 /* UIView+ScottAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ScottAlertView.h"; sourceTree = "<group>"; };
+		D170AEAB1EB1D1D2003668C0 /* UIView+ScottAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ScottAlertView.m"; sourceTree = "<group>"; };
+		D170AEAC1EB1D1D2003668C0 /* UIView+ScottAutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ScottAutoLayout.h"; sourceTree = "<group>"; };
+		D170AEAD1EB1D1D2003668C0 /* UIView+ScottAutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ScottAutoLayout.m"; sourceTree = "<group>"; };
+		D170AEAE1EB1D1D2003668C0 /* ScottAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScottAlertViewController.h; sourceTree = "<group>"; };
+		D170AEAF1EB1D1D2003668C0 /* ScottAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScottAlertViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,10 +126,15 @@
 		D170AE6D1EB1B2B8003668C0 /* WHBasicProj */ = {
 			isa = PBXGroup;
 			children = (
+				D170AE991EB1D1C7003668C0 /* OCThirdLibs */,
+				D170AE891EB1BCA0003668C0 /* OC */,
+				D170AE881EB1B8A6003668C0 /* WHProjHeaderPCH.h */,
 				D170AE711EB1B2B8003668C0 /* AppDelegate.h */,
 				D170AE721EB1B2B8003668C0 /* AppDelegate.m */,
 				D170AE741EB1B2B8003668C0 /* ViewController.h */,
 				D170AE751EB1B2B8003668C0 /* ViewController.m */,
+				D170AE961EB1CE1D003668C0 /* WHNewsViewController.h */,
+				D170AE971EB1CE1D003668C0 /* WHNewsViewController.m */,
 				D170AE771EB1B2B8003668C0 /* Main.storyboard */,
 				D170AE7A1EB1B2B8003668C0 /* Assets.xcassets */,
 				D170AE7C1EB1B2B8003668C0 /* LaunchScreen.storyboard */,
@@ -101,6 +150,71 @@
 				D170AE6F1EB1B2B8003668C0 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D170AE891EB1BCA0003668C0 /* OC */ = {
+			isa = PBXGroup;
+			children = (
+				D170AE8A1EB1BCBE003668C0 /* WHTabBarController.h */,
+				D170AE8B1EB1BCBE003668C0 /* WHTabBarController.m */,
+				D170AE8D1EB1BDFE003668C0 /* AppDelegate+UMengMessage.h */,
+				D170AE8E1EB1BDFE003668C0 /* AppDelegate+UMengMessage.m */,
+				D170AE901EB1C2CC003668C0 /* AppDelegate+Reachability.h */,
+				D170AE911EB1C2CC003668C0 /* AppDelegate+Reachability.m */,
+				D170AE931EB1C5AF003668C0 /* AppDelegate+UMengMobClick.h */,
+				D170AE941EB1C5AF003668C0 /* AppDelegate+UMengMobClick.m */,
+			);
+			path = OC;
+			sourceTree = "<group>";
+		};
+		D170AE991EB1D1C7003668C0 /* OCThirdLibs */ = {
+			isa = PBXGroup;
+			children = (
+				D170AE9A1EB1D1D2003668C0 /* ScottAlertController */,
+			);
+			path = OCThirdLibs;
+			sourceTree = "<group>";
+		};
+		D170AE9A1EB1D1D2003668C0 /* ScottAlertController */ = {
+			isa = PBXGroup;
+			children = (
+				D170AE9B1EB1D1D2003668C0 /* ScottAlertAnimations */,
+				D170AEA41EB1D1D2003668C0 /* ScottAlertController.h */,
+				D170AEA51EB1D1D2003668C0 /* ScottAlertView */,
+				D170AEAE1EB1D1D2003668C0 /* ScottAlertViewController.h */,
+				D170AEAF1EB1D1D2003668C0 /* ScottAlertViewController.m */,
+			);
+			path = ScottAlertController;
+			sourceTree = "<group>";
+		};
+		D170AE9B1EB1D1D2003668C0 /* ScottAlertAnimations */ = {
+			isa = PBXGroup;
+			children = (
+				D170AE9C1EB1D1D2003668C0 /* ScottBaseAnimation.h */,
+				D170AE9D1EB1D1D2003668C0 /* ScottBaseAnimation.m */,
+				D170AE9E1EB1D1D2003668C0 /* ScottDropDownAnimation.h */,
+				D170AE9F1EB1D1D2003668C0 /* ScottDropDownAnimation.m */,
+				D170AEA01EB1D1D2003668C0 /* ScottFadeAnimation.h */,
+				D170AEA11EB1D1D2003668C0 /* ScottFadeAnimation.m */,
+				D170AEA21EB1D1D2003668C0 /* ScottScaleFadeAnimation.h */,
+				D170AEA31EB1D1D2003668C0 /* ScottScaleFadeAnimation.m */,
+			);
+			path = ScottAlertAnimations;
+			sourceTree = "<group>";
+		};
+		D170AEA51EB1D1D2003668C0 /* ScottAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				D170AEA61EB1D1D2003668C0 /* ScottAlertView.h */,
+				D170AEA71EB1D1D2003668C0 /* ScottAlertView.m */,
+				D170AEA81EB1D1D2003668C0 /* ScottShowAlertView.h */,
+				D170AEA91EB1D1D2003668C0 /* ScottShowAlertView.m */,
+				D170AEAA1EB1D1D2003668C0 /* UIView+ScottAlertView.h */,
+				D170AEAB1EB1D1D2003668C0 /* UIView+ScottAlertView.m */,
+				D170AEAC1EB1D1D2003668C0 /* UIView+ScottAutoLayout.h */,
+				D170AEAD1EB1D1D2003668C0 /* UIView+ScottAutoLayout.m */,
+			);
+			path = ScottAlertView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +251,7 @@
 				TargetAttributes = {
 					D170AE6A1EB1B2B8003668C0 = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = XL24MERRUR;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -225,8 +340,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D170AEB41EB1D1D2003668C0 /* ScottAlertView.m in Sources */,
+				D170AE951EB1C5AF003668C0 /* AppDelegate+UMengMobClick.m in Sources */,
+				D170AEB51EB1D1D2003668C0 /* ScottShowAlertView.m in Sources */,
+				D170AEB01EB1D1D2003668C0 /* ScottBaseAnimation.m in Sources */,
+				D170AEB61EB1D1D2003668C0 /* UIView+ScottAlertView.m in Sources */,
+				D170AE8F1EB1BDFE003668C0 /* AppDelegate+UMengMessage.m in Sources */,
+				D170AEB11EB1D1D2003668C0 /* ScottDropDownAnimation.m in Sources */,
+				D170AEB21EB1D1D2003668C0 /* ScottFadeAnimation.m in Sources */,
+				D170AEB31EB1D1D2003668C0 /* ScottScaleFadeAnimation.m in Sources */,
+				D170AEB81EB1D1D2003668C0 /* ScottAlertViewController.m in Sources */,
+				D170AE921EB1C2CC003668C0 /* AppDelegate+Reachability.m in Sources */,
 				D170AE761EB1B2B8003668C0 /* ViewController.m in Sources */,
+				D170AEB71EB1D1D2003668C0 /* UIView+ScottAutoLayout.m in Sources */,
+				D170AE981EB1CE1D003668C0 /* WHNewsViewController.m in Sources */,
 				D170AE731EB1B2B8003668C0 /* AppDelegate.m in Sources */,
+				D170AE8C1EB1BCBE003668C0 /* WHTabBarController.m in Sources */,
 				D170AE701EB1B2B8003668C0 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,6 +475,9 @@
 			baseConfigurationReference = A55699F5FCAFE07ABB31F45D /* Pods-WHBasicProj.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = XL24MERRUR;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/WHBasicProj/WHProjHeaderPCH.h";
 				INFOPLIST_FILE = WHBasicProj/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -359,6 +491,9 @@
 			baseConfigurationReference = 5BEDE3522C61B6C52C2AF98E /* Pods-WHBasicProj.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = XL24MERRUR;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/WHBasicProj/WHProjHeaderPCH.h";
 				INFOPLIST_FILE = WHBasicProj/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
