@@ -10,4 +10,6 @@
 
 @interface WHSixWebViewDetailController : UIViewController
 @property (nonatomic,copy)NSString *webUrlString;
+@property (nonatomic,assign)BOOL isThree;//三期内必出 需要请求Url 需要单独判断
+@property (nonatomic,assign)BOOL isHTMLString;
 @end

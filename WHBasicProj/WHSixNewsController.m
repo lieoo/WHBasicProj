@@ -25,12 +25,13 @@
     self.navigationController.navigationBar.hidden = NO;
     
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:105.0f/255.0f green:183.0f/255.0f blue:244.0f/255.0f alpha:1];
-    self.title = @"资料大全";
-    self.view.backgroundColor = [UIColor whiteColor];
     
     [self.navigationController.navigationBar setTitleTextAttributes:@{
                                                                       UITextAttributeTextColor:[UIColor whiteColor],
                                                                       }];
+    self.title = @"资料大全";
+    self.view.backgroundColor = [UIColor whiteColor];
+    
     
 }
 - (void)viewWillAppear:(BOOL)animated{
@@ -117,6 +118,7 @@
     WHSixWebViewDetailController *web = [[WHSixWebViewDetailController alloc]init];
     web.webUrlString = string;
     web.title = _dataSource[tag][@"content"];
+    if (tag == 8) return;
     [self.navigationController pushViewController:web animated:YES];
 }
 

@@ -14,7 +14,9 @@
 #import <MJExtension/MJExtension.h>
 #import "WHDataModel.h"
 #import "WHSixNewsController.h"
-
+#import "GuessNumberViewController.h"
+#import "WHSixWebViewDetailController.h"
+#import "LotteryZoneViewController.h"
 @interface WHNewsViewController ()<UITableViewDelegate,UITableViewDataSource,SDCycleScrollViewDelegate>
 @property (nonatomic,strong)SDCycleScrollView *cycleScrollView;
 
@@ -34,8 +36,12 @@
     [super viewDidLoad];
  
 //    [self.view addSubview:self.tableView];
-    
 //    [self.view addSubview:self.scrollLabelView];
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:105.0f/255.0f green:183.0f/255.0f blue:244.0f/255.0f alpha:1];
+    
+    [self.navigationController.navigationBar setTitleTextAttributes:@{
+                                                                      UITextAttributeTextColor:[UIColor whiteColor],
+                                                                      }];
     [self.view addSubview:self.cycleScrollView];
     
     [self setUpNetRequest];
@@ -48,11 +54,31 @@
     if (sender.tag == 0) {
         [self.navigationController pushViewController:[WHSixNewsController new] animated:YES];
     }else if (sender.tag == 1){
-        
+        WHSixWebViewDetailController *web = [[WHSixWebViewDetailController alloc]init];
+        web.title = @"三期内必出";
+        web.isThree = YES;
+        [self.navigationController pushViewController:web animated:YES];
     }else if (sender.tag == 2){
-        
+        WHSixWebViewDetailController *web = [[WHSixWebViewDetailController alloc]init];
+        web.title = @"开奖记录查询";
+        web.isHTMLString = YES;
+        NSURL *url = [NSURL URLWithString:@"http://app.lhst6.com/ziliao/chaxun.php"];
+        web.webUrlString = [[NSString alloc]initWithContentsOfURL:url encoding:NSUTF8StringEncoding error:nil];
+        [self.navigationController pushViewController:web animated:YES];
     }else if (sender.tag == 3){
         
+    }else if (sender.tag == 4){
+        GuessNumberViewController *g = [[GuessNumberViewController alloc]init];
+        [self.navigationController pushViewController:g animated:YES];
+    }else if (sender.tag == 5){
+        WHSixWebViewDetailController *web = [[WHSixWebViewDetailController alloc]init];
+        web.webUrlString = @"http://app.lhst6.com/kaijiangzhibo/";
+        web.title = @"开奖资料";
+        [self.navigationController pushViewController:web animated:YES];
+    }else if (sender.tag == 6){
+        LotteryZoneViewController *lo = [[LotteryZoneViewController alloc]init];
+        lo.title = @"彩票开奖专区";
+        [self.navigationController pushViewController:lo animated:YES];
     }
 }
 -(void)viewWillAppear:(BOOL)animated{
@@ -64,6 +90,7 @@
     hud.label.text = @"加载中";
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
     AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     NSURL *URL = [NSURL URLWithString:@"http://app.lh888888.com/Award/api/nav/type_id/1.json"];
     NSURLRequest *request = [NSURLRequest requestWithURL:URL];
     NSURLSessionDataTask *dataTask = [manager dataTaskWithRequest:request completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {

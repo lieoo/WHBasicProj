@@ -145,6 +145,10 @@
 		D16563A61EB3164A00D82438 /* WHSixNewsController.m in Sources */ = {isa = PBXBuildFile; fileRef = D16563A51EB3164A00D82438 /* WHSixNewsController.m */; };
 		D16563A91EB31B9500D82438 /* WHDataSixDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D16563A81EB31B9500D82438 /* WHDataSixDetailModel.m */; };
 		D16563AC1EB3264200D82438 /* WHSixWebViewDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = D16563AB1EB3264200D82438 /* WHSixWebViewDetailController.m */; };
+		D16563AF1EB368ED00D82438 /* LotteryZoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D16563AE1EB368ED00D82438 /* LotteryZoneViewController.m */; };
+		D16563B21EB3701300D82438 /* LotteryZoneDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D16563B11EB3701300D82438 /* LotteryZoneDataModel.m */; };
+		D16563B51EB378BA00D82438 /* LotteryZoneDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D16563B41EB378BA00D82438 /* LotteryZoneDetailViewController.m */; };
+		D16563B81EB379F600D82438 /* LotteryZoneDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D16563B71EB379F600D82438 /* LotteryZoneDetailTableViewCell.m */; };
 		D170AE701EB1B2B8003668C0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D170AE6F1EB1B2B8003668C0 /* main.m */; };
 		D170AE731EB1B2B8003668C0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D170AE721EB1B2B8003668C0 /* AppDelegate.m */; };
 		D170AE791EB1B2B8003668C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D170AE771EB1B2B8003668C0 /* Main.storyboard */; };
@@ -324,6 +328,14 @@
 		D16563A81EB31B9500D82438 /* WHDataSixDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHDataSixDetailModel.m; sourceTree = "<group>"; };
 		D16563AA1EB3264200D82438 /* WHSixWebViewDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHSixWebViewDetailController.h; sourceTree = "<group>"; };
 		D16563AB1EB3264200D82438 /* WHSixWebViewDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHSixWebViewDetailController.m; sourceTree = "<group>"; };
+		D16563AD1EB368EC00D82438 /* LotteryZoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LotteryZoneViewController.h; sourceTree = "<group>"; };
+		D16563AE1EB368ED00D82438 /* LotteryZoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LotteryZoneViewController.m; sourceTree = "<group>"; };
+		D16563B01EB3701300D82438 /* LotteryZoneDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LotteryZoneDataModel.h; sourceTree = "<group>"; };
+		D16563B11EB3701300D82438 /* LotteryZoneDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LotteryZoneDataModel.m; sourceTree = "<group>"; };
+		D16563B31EB378BA00D82438 /* LotteryZoneDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LotteryZoneDetailViewController.h; sourceTree = "<group>"; };
+		D16563B41EB378BA00D82438 /* LotteryZoneDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LotteryZoneDetailViewController.m; sourceTree = "<group>"; };
+		D16563B61EB379F600D82438 /* LotteryZoneDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LotteryZoneDetailTableViewCell.h; sourceTree = "<group>"; };
+		D16563B71EB379F600D82438 /* LotteryZoneDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LotteryZoneDetailTableViewCell.m; sourceTree = "<group>"; };
 		D170AE6B1EB1B2B8003668C0 /* WHBasicProj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WHBasicProj.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D170AE6F1EB1B2B8003668C0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D170AE711EB1B2B8003668C0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../../AppDelegate.h; sourceTree = "<group>"; };
@@ -531,6 +543,8 @@
 		D16562D31EB305DD00D82438 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D16563B61EB379F600D82438 /* LotteryZoneDetailTableViewCell.h */,
+				D16563B71EB379F600D82438 /* LotteryZoneDetailTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -679,6 +693,12 @@
 				D1CFA08E1EB21019005B75F5 /* DetailWebViewController.m */,
 				D1CFA09E1EB21FE6005B75F5 /* GuessNumberViewController.h */,
 				D1CFA09F1EB21FE6005B75F5 /* GuessNumberViewController.m */,
+				D16563AD1EB368EC00D82438 /* LotteryZoneViewController.h */,
+				D16563AE1EB368ED00D82438 /* LotteryZoneViewController.m */,
+				D16563B31EB378BA00D82438 /* LotteryZoneDetailViewController.h */,
+				D16563B41EB378BA00D82438 /* LotteryZoneDetailViewController.m */,
+				D16563B01EB3701300D82438 /* LotteryZoneDataModel.h */,
+				D16563B11EB3701300D82438 /* LotteryZoneDataModel.m */,
 				D11C7C7F1EB1D50800CE63E8 /* WHProFileViewController.h */,
 				D11C7C801EB1D50800CE63E8 /* WHProFileViewController.m */,
 				D11C7C891EB1DA5800CE63E8 /* Web */,
@@ -1038,6 +1058,7 @@
 				D11C7C7C1EB1D4E700CE63E8 /* AppDelegate+Reachability.m in Sources */,
 				D170AEB61EB1D1D2003668C0 /* UIView+ScottAlertView.m in Sources */,
 				D16562D61EB305EE00D82438 /* WHDataModel.m in Sources */,
+				D16563B81EB379F600D82438 /* LotteryZoneDetailTableViewCell.m in Sources */,
 				D11C7C811EB1D50800CE63E8 /* WHProFileViewController.m in Sources */,
 				D16563AC1EB3264200D82438 /* WHSixWebViewDetailController.m in Sources */,
 				D170AEB11EB1D1D2003668C0 /* ScottDropDownAnimation.m in Sources */,
@@ -1049,11 +1070,14 @@
 				D1CFA09A1EB218B1005B75F5 /* PMBallLayer.m in Sources */,
 				D170AEB81EB1D1D2003668C0 /* ScottAlertViewController.m in Sources */,
 				D11C7C9A1EB1E56500CE63E8 /* WKMessageProgressHUD.m in Sources */,
+				D16563B51EB378BA00D82438 /* LotteryZoneDetailViewController.m in Sources */,
 				D1CFA09B1EB218B1005B75F5 /* PMElasticView.m in Sources */,
 				D170AEB71EB1D1D2003668C0 /* UIView+ScottAutoLayout.m in Sources */,
 				D16563A61EB3164A00D82438 /* WHSixNewsController.m in Sources */,
 				D170AE981EB1CE1D003668C0 /* WHNewsViewController.m in Sources */,
+				D16563B21EB3701300D82438 /* LotteryZoneDataModel.m in Sources */,
 				D170AE731EB1B2B8003668C0 /* AppDelegate.m in Sources */,
+				D16563AF1EB368ED00D82438 /* LotteryZoneViewController.m in Sources */,
 				D11C7C9C1EB1E56500CE63E8 /* WKWaitingProgressHUD.m in Sources */,
 				D11C7C881EB1D91D00CE63E8 /* PXGetDataTool.m in Sources */,
 				D11C7C7E1EB1D4E700CE63E8 /* AppDelegate+UMengMobClick.m in Sources */,
