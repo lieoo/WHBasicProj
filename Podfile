@@ -16,4 +16,7 @@ pod 'Masonry'
 pod 'UMengAnalytics-NO-IDFA'
 pod 'UMessage'
 pod 'KVNProgress'
+pod 'SDCycleScrollView'
+pod 'TXScrollLabelView'
+
 end

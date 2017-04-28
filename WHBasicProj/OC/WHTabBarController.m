@@ -27,6 +27,11 @@
                                    kImgKey    : @"TabMessageIcon",
                                    kSelImgKey : @"TabMessageIcon"},
                                  
+                                 @{kClassKey  : @"GuessNumberViewController",
+                                   kTitleKey  : @"号码预测",
+                                   kImgKey    : @"profile-group-icon",
+                                   kSelImgKey : @"profile-group-icon"},
+                                 
                                  @{kClassKey  : @"WHProFileViewController",
                                    kTitleKey  : @"我的",
                                    kImgKey    : @"profile-group-icon",
