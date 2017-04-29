@@ -14,7 +14,7 @@
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         
-        _headImage = [[UIImageView alloc]initWithFrame:CGRectMake(30, 30, 25, 25)];
+        _headImage = [[UIImageView alloc]initWithFrame:CGRectMake(30, 33, 25, 25)];
         [self.contentView addSubview:_headImage];
         
         _nameLabel = [[UILabel alloc]initWithFrame:CGRectMake(70, 30, DEVICEWIDTH, 30)];
