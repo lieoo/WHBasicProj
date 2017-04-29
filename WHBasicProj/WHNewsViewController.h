@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WHNewsViewController : UIViewController
+@interface WHNewsViewController : WHBasicViewController
 
 @end

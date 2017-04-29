@@ -7,6 +7,7 @@
 //
 
 #import "WHTabBarController.h"
+#import "BasicNavController.h"
 
 @interface WHTabBarController ()
 
@@ -45,7 +46,7 @@
     
     
     [childItemsArray enumerateObjectsUsingBlock:^(NSDictionary *dict, NSUInteger idx, BOOL *stop) {
-        UIViewController *vc = [NSClassFromString(dict[kClassKey]) new];
+        WHBasicViewController *vc = [NSClassFromString(dict[kClassKey]) new];
         vc.title = dict[kTitleKey];
         UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
         UITabBarItem *item = nav.tabBarItem;
@@ -55,6 +56,14 @@
         
         [self addChildViewController:nav];
     }];
+}
+
+-(BOOL)shouldAutorotate{
+    return NO;
+}
+//支持的方向 因为界面A我们只需要支持竖屏
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskPortrait;
 }
 
 @end

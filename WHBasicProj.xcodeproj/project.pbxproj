@@ -247,6 +247,8 @@
 		D19C3EA01EB4A85D006E541D /* share_platform_wechat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D19C3E9C1EB4A85D006E541D /* share_platform_wechat@2x.png */; };
 		D19C3EA11EB4A85D006E541D /* share_platform_wechattimeline.png in Resources */ = {isa = PBXBuildFile; fileRef = D19C3E9D1EB4A85D006E541D /* share_platform_wechattimeline.png */; };
 		D19C3EA21EB4A85D006E541D /* share_platform_wechattimeline@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D19C3E9E1EB4A85D006E541D /* share_platform_wechattimeline@2x.png */; };
+		D19C3EA51EB4B4F1006E541D /* BasicNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = D19C3EA41EB4B4F1006E541D /* BasicNavController.m */; };
+		D19C3EA81EB4B6A1006E541D /* WHBasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D19C3EA71EB4B6A1006E541D /* WHBasicViewController.m */; };
 		D1CFA08F1EB21019005B75F5 /* DetailWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1CFA08E1EB21019005B75F5 /* DetailWebViewController.m */; };
 		D1CFA09A1EB218B1005B75F5 /* PMBallLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D1CFA0921EB218B1005B75F5 /* PMBallLayer.m */; };
 		D1CFA09B1EB218B1005B75F5 /* PMElasticView.m in Sources */ = {isa = PBXBuildFile; fileRef = D1CFA0951EB218B1005B75F5 /* PMElasticView.m */; };
@@ -542,6 +544,10 @@
 		D19C3E9C1EB4A85D006E541D /* share_platform_wechat@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share_platform_wechat@2x.png"; sourceTree = "<group>"; };
 		D19C3E9D1EB4A85D006E541D /* share_platform_wechattimeline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share_platform_wechattimeline.png; sourceTree = "<group>"; };
 		D19C3E9E1EB4A85D006E541D /* share_platform_wechattimeline@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share_platform_wechattimeline@2x.png"; sourceTree = "<group>"; };
+		D19C3EA31EB4B4F1006E541D /* BasicNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicNavController.h; sourceTree = "<group>"; };
+		D19C3EA41EB4B4F1006E541D /* BasicNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicNavController.m; sourceTree = "<group>"; };
+		D19C3EA61EB4B6A1006E541D /* WHBasicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHBasicViewController.h; sourceTree = "<group>"; };
+		D19C3EA71EB4B6A1006E541D /* WHBasicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHBasicViewController.m; sourceTree = "<group>"; };
 		D1CFA08D1EB21019005B75F5 /* DetailWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailWebViewController.h; sourceTree = "<group>"; };
 		D1CFA08E1EB21019005B75F5 /* DetailWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailWebViewController.m; sourceTree = "<group>"; };
 		D1CFA0911EB218B1005B75F5 /* PMBallLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMBallLayer.h; sourceTree = "<group>"; };
@@ -952,6 +958,10 @@
 				D11C7C801EB1D50800CE63E8 /* WHProFileViewController.m */,
 				D19C3E751EB49B2F006E541D /* WHNoDataTableViewController.h */,
 				D19C3E761EB49B2F006E541D /* WHNoDataTableViewController.m */,
+				D19C3EA31EB4B4F1006E541D /* BasicNavController.h */,
+				D19C3EA41EB4B4F1006E541D /* BasicNavController.m */,
+				D19C3EA61EB4B6A1006E541D /* WHBasicViewController.h */,
+				D19C3EA71EB4B6A1006E541D /* WHBasicViewController.m */,
 				D16562D21EB305DD00D82438 /* Model */,
 				D16562D31EB305DD00D82438 /* View */,
 				D11C7C891EB1DA5800CE63E8 /* Web */,
@@ -1395,6 +1405,7 @@
 				D1CFA09C1EB218B1005B75F5 /* PMLineLayer.m in Sources */,
 				D11C7C7D1EB1D4E700CE63E8 /* AppDelegate+UMengMessage.m in Sources */,
 				D16563A91EB31B9500D82438 /* WHDataSixDetailModel.m in Sources */,
+				D19C3EA81EB4B6A1006E541D /* WHBasicViewController.m in Sources */,
 				D11C7C8F1EB1DA5800CE63E8 /* webViewTabBarController.m in Sources */,
 				D170AEB41EB1D1D2003668C0 /* ScottAlertView.m in Sources */,
 				D170AEB51EB1D1D2003668C0 /* ScottShowAlertView.m in Sources */,
@@ -1402,6 +1413,7 @@
 				D170AEB01EB1D1D2003668C0 /* ScottBaseAnimation.m in Sources */,
 				D11C7C8E1EB1DA5800CE63E8 /* webViewController.m in Sources */,
 				D11C7C7C1EB1D4E700CE63E8 /* AppDelegate+Reachability.m in Sources */,
+				D19C3EA51EB4B4F1006E541D /* BasicNavController.m in Sources */,
 				D170AEB61EB1D1D2003668C0 /* UIView+ScottAlertView.m in Sources */,
 				D19C3E921EB4A597006E541D /* HMScannerViewController.m in Sources */,
 				D16562D61EB305EE00D82438 /* WHDataModel.m in Sources */,

@@ -1,5 +1,5 @@
 //
-//  WHShareToFriendController.h
+//  WHBasicViewController.h
 //  WHBasicProj
 //
 //  Created by 行政 on 17/4/29.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WHShareToFriendController : WHBasicViewController
+@interface WHBasicViewController : UIViewController
 
 @end

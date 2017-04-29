@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WHProFileViewController : UIViewController
+@interface WHProFileViewController : WHBasicViewController
 
 @end

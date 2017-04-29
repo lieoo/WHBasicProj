@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WHMoreFuncViewController : UIViewController
+@interface WHMoreFuncViewController : WHBasicViewController
 
 @end
