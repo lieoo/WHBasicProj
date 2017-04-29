@@ -226,7 +226,7 @@
     CGFloat w = DEVICEWIDTH/3;
     CGFloat bannerY;
     if (DEVICEWIDTH == 320) {
-        bannerY = 155;
+        bannerY = 150;
     }else{
         bannerY = 195;
     }
@@ -234,7 +234,7 @@
     
     for (NSInteger i=0 ; i<3; i++) {
         UIButton *btn = [[UIButton alloc]init];
-        btn.frame = CGRectMake((i*w)+50, bannerY, 30, 30);
+        btn.frame = CGRectMake((i*w)+40, bannerY, 30, 30);
         btn.tag = 10+i;
         [btn setImage:[UIImage imageNamed:[NSString stringWithFormat:@"nav%ld",i+1]] forState:UIControlStateNormal];
         [btn addTarget:self action:@selector(touchNavButton:) forControlEvents:UIControlEventTouchUpInside];

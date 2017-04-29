@@ -18,6 +18,7 @@
     [super viewWillAppear:animated];
     self.view.backgroundColor = RGB(236, 236, 236);
     self.navigationController.navigationBar.hidden = NO;
+    self.tabBarController.tabBar.hidden = YES;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];

@@ -232,6 +232,21 @@
 		D19C3E7B1EB4A2B2006E541D /* no_data.png in Resources */ = {isa = PBXBuildFile; fileRef = D19C3E781EB4A2B2006E541D /* no_data.png */; };
 		D19C3E7C1EB4A2B2006E541D /* no_data@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D19C3E791EB4A2B2006E541D /* no_data@2x.png */; };
 		D19C3E7D1EB4A2B2006E541D /* no_data@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D19C3E7A1EB4A2B2006E541D /* no_data@3x.png */; };
+		D19C3E8C1EB4A597006E541D /* HMScanerCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D19C3E801EB4A597006E541D /* HMScanerCardViewController.m */; };
+		D19C3E8D1EB4A597006E541D /* HMScanner.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D19C3E811EB4A597006E541D /* HMScanner.bundle */; };
+		D19C3E8E1EB4A597006E541D /* HMScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = D19C3E831EB4A597006E541D /* HMScanner.m */; };
+		D19C3E8F1EB4A597006E541D /* HMScannerBorder.m in Sources */ = {isa = PBXBuildFile; fileRef = D19C3E851EB4A597006E541D /* HMScannerBorder.m */; };
+		D19C3E901EB4A597006E541D /* HMScannerController.m in Sources */ = {isa = PBXBuildFile; fileRef = D19C3E871EB4A597006E541D /* HMScannerController.m */; };
+		D19C3E911EB4A597006E541D /* HMScannerMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = D19C3E891EB4A597006E541D /* HMScannerMaskView.m */; };
+		D19C3E921EB4A597006E541D /* HMScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D19C3E8B1EB4A597006E541D /* HMScannerViewController.m */; };
+		D19C3E971EB4A856006E541D /* share_platform_imessage.png in Resources */ = {isa = PBXBuildFile; fileRef = D19C3E931EB4A856006E541D /* share_platform_imessage.png */; };
+		D19C3E981EB4A856006E541D /* share_platform_imessage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D19C3E941EB4A856006E541D /* share_platform_imessage@2x.png */; };
+		D19C3E991EB4A856006E541D /* share_platform_qqfriends.png in Resources */ = {isa = PBXBuildFile; fileRef = D19C3E951EB4A856006E541D /* share_platform_qqfriends.png */; };
+		D19C3E9A1EB4A856006E541D /* share_platform_qqfriends@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D19C3E961EB4A856006E541D /* share_platform_qqfriends@2x.png */; };
+		D19C3E9F1EB4A85D006E541D /* share_platform_wechat.png in Resources */ = {isa = PBXBuildFile; fileRef = D19C3E9B1EB4A85D006E541D /* share_platform_wechat.png */; };
+		D19C3EA01EB4A85D006E541D /* share_platform_wechat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D19C3E9C1EB4A85D006E541D /* share_platform_wechat@2x.png */; };
+		D19C3EA11EB4A85D006E541D /* share_platform_wechattimeline.png in Resources */ = {isa = PBXBuildFile; fileRef = D19C3E9D1EB4A85D006E541D /* share_platform_wechattimeline.png */; };
+		D19C3EA21EB4A85D006E541D /* share_platform_wechattimeline@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D19C3E9E1EB4A85D006E541D /* share_platform_wechattimeline@2x.png */; };
 		D1CFA08F1EB21019005B75F5 /* DetailWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1CFA08E1EB21019005B75F5 /* DetailWebViewController.m */; };
 		D1CFA09A1EB218B1005B75F5 /* PMBallLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D1CFA0921EB218B1005B75F5 /* PMBallLayer.m */; };
 		D1CFA09B1EB218B1005B75F5 /* PMElasticView.m in Sources */ = {isa = PBXBuildFile; fileRef = D1CFA0951EB218B1005B75F5 /* PMElasticView.m */; };
@@ -482,7 +497,7 @@
 		D19C3E4A1EB45F11006E541D /* WHShareToFriendController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHShareToFriendController.m; sourceTree = "<group>"; };
 		D19C3E4C1EB45FC1006E541D /* WHMoreFuncViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHMoreFuncViewController.h; sourceTree = "<group>"; };
 		D19C3E4D1EB45FC1006E541D /* WHMoreFuncViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHMoreFuncViewController.m; sourceTree = "<group>"; };
-		D19C3E4F1EB46783006E541D /* AppIcons40x40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcons40x40@3x.png"; sourceTree = "<group>"; };
+		D19C3E4F1EB46783006E541D /* AppIcons40x40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AppIcons40x40@3x.png"; path = "OC/AppIcons40x40@3x.png"; sourceTree = "<group>"; };
 		D19C3E511EB46B20006E541D /* newiconp1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newiconp1.png; sourceTree = "<group>"; };
 		D19C3E521EB46B20006E541D /* newiconp1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "newiconp1@2x.png"; sourceTree = "<group>"; };
 		D19C3E531EB46B20006E541D /* newiconp1@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "newiconp1@3x.png"; sourceTree = "<group>"; };
@@ -506,6 +521,27 @@
 		D19C3E781EB4A2B2006E541D /* no_data.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = no_data.png; sourceTree = "<group>"; };
 		D19C3E791EB4A2B2006E541D /* no_data@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "no_data@2x.png"; sourceTree = "<group>"; };
 		D19C3E7A1EB4A2B2006E541D /* no_data@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "no_data@3x.png"; sourceTree = "<group>"; };
+		D19C3E7F1EB4A597006E541D /* HMScanerCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMScanerCardViewController.h; sourceTree = "<group>"; };
+		D19C3E801EB4A597006E541D /* HMScanerCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMScanerCardViewController.m; sourceTree = "<group>"; };
+		D19C3E811EB4A597006E541D /* HMScanner.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = HMScanner.bundle; sourceTree = "<group>"; };
+		D19C3E821EB4A597006E541D /* HMScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMScanner.h; sourceTree = "<group>"; };
+		D19C3E831EB4A597006E541D /* HMScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMScanner.m; sourceTree = "<group>"; };
+		D19C3E841EB4A597006E541D /* HMScannerBorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMScannerBorder.h; sourceTree = "<group>"; };
+		D19C3E851EB4A597006E541D /* HMScannerBorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMScannerBorder.m; sourceTree = "<group>"; };
+		D19C3E861EB4A597006E541D /* HMScannerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMScannerController.h; sourceTree = "<group>"; };
+		D19C3E871EB4A597006E541D /* HMScannerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMScannerController.m; sourceTree = "<group>"; };
+		D19C3E881EB4A597006E541D /* HMScannerMaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMScannerMaskView.h; sourceTree = "<group>"; };
+		D19C3E891EB4A597006E541D /* HMScannerMaskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMScannerMaskView.m; sourceTree = "<group>"; };
+		D19C3E8A1EB4A597006E541D /* HMScannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMScannerViewController.h; sourceTree = "<group>"; };
+		D19C3E8B1EB4A597006E541D /* HMScannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMScannerViewController.m; sourceTree = "<group>"; };
+		D19C3E931EB4A856006E541D /* share_platform_imessage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share_platform_imessage.png; sourceTree = "<group>"; };
+		D19C3E941EB4A856006E541D /* share_platform_imessage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share_platform_imessage@2x.png"; sourceTree = "<group>"; };
+		D19C3E951EB4A856006E541D /* share_platform_qqfriends.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share_platform_qqfriends.png; sourceTree = "<group>"; };
+		D19C3E961EB4A856006E541D /* share_platform_qqfriends@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share_platform_qqfriends@2x.png"; sourceTree = "<group>"; };
+		D19C3E9B1EB4A85D006E541D /* share_platform_wechat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share_platform_wechat.png; sourceTree = "<group>"; };
+		D19C3E9C1EB4A85D006E541D /* share_platform_wechat@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share_platform_wechat@2x.png"; sourceTree = "<group>"; };
+		D19C3E9D1EB4A85D006E541D /* share_platform_wechattimeline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share_platform_wechattimeline.png; sourceTree = "<group>"; };
+		D19C3E9E1EB4A85D006E541D /* share_platform_wechattimeline@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share_platform_wechattimeline@2x.png"; sourceTree = "<group>"; };
 		D1CFA08D1EB21019005B75F5 /* DetailWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailWebViewController.h; sourceTree = "<group>"; };
 		D1CFA08E1EB21019005B75F5 /* DetailWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailWebViewController.m; sourceTree = "<group>"; };
 		D1CFA0911EB218B1005B75F5 /* PMBallLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PMBallLayer.h; sourceTree = "<group>"; };
@@ -692,6 +728,14 @@
 		D16562D71EB30B0B00D82438 /* ImageSource */ = {
 			isa = PBXGroup;
 			children = (
+				D19C3E9B1EB4A85D006E541D /* share_platform_wechat.png */,
+				D19C3E9C1EB4A85D006E541D /* share_platform_wechat@2x.png */,
+				D19C3E9D1EB4A85D006E541D /* share_platform_wechattimeline.png */,
+				D19C3E9E1EB4A85D006E541D /* share_platform_wechattimeline@2x.png */,
+				D19C3E931EB4A856006E541D /* share_platform_imessage.png */,
+				D19C3E941EB4A856006E541D /* share_platform_imessage@2x.png */,
+				D19C3E951EB4A856006E541D /* share_platform_qqfriends.png */,
+				D19C3E961EB4A856006E541D /* share_platform_qqfriends@2x.png */,
 				D19C3E781EB4A2B2006E541D /* no_data.png */,
 				D19C3E791EB4A2B2006E541D /* no_data@2x.png */,
 				D19C3E7A1EB4A2B2006E541D /* no_data@3x.png */,
@@ -883,6 +927,7 @@
 			children = (
 				D170AE881EB1B8A6003668C0 /* WHProjHeaderPCH.h */,
 				D170AE891EB1BCA0003668C0 /* OC */,
+				D19C3E4F1EB46783006E541D /* AppIcons40x40@3x.png */,
 				D170AE961EB1CE1D003668C0 /* WHNewsViewController.h */,
 				D170AE971EB1CE1D003668C0 /* WHNewsViewController.m */,
 				D19C3E491EB45F11006E541D /* WHShareToFriendController.h */,
@@ -936,7 +981,6 @@
 				D11C7C751EB1D4BD00CE63E8 /* AppDelegate */,
 				D170AE8A1EB1BCBE003668C0 /* WHTabBarController.h */,
 				D170AE8B1EB1BCBE003668C0 /* WHTabBarController.m */,
-				D19C3E4F1EB46783006E541D /* AppIcons40x40@3x.png */,
 			);
 			path = OC;
 			sourceTree = "<group>";
@@ -944,6 +988,7 @@
 		D170AE991EB1D1C7003668C0 /* OCThirdLibs */ = {
 			isa = PBXGroup;
 			children = (
+				D19C3E7E1EB4A597006E541D /* QRCode */,
 				D1CFA0901EB218B1005B75F5 /* Refresh */,
 				D11C7C931EB1E56500CE63E8 /* WKProgressHUD */,
 				D170AE9A1EB1D1D2003668C0 /* ScottAlertController */,
@@ -991,6 +1036,26 @@
 				D170AEAD1EB1D1D2003668C0 /* UIView+ScottAutoLayout.m */,
 			);
 			path = ScottAlertView;
+			sourceTree = "<group>";
+		};
+		D19C3E7E1EB4A597006E541D /* QRCode */ = {
+			isa = PBXGroup;
+			children = (
+				D19C3E7F1EB4A597006E541D /* HMScanerCardViewController.h */,
+				D19C3E801EB4A597006E541D /* HMScanerCardViewController.m */,
+				D19C3E811EB4A597006E541D /* HMScanner.bundle */,
+				D19C3E821EB4A597006E541D /* HMScanner.h */,
+				D19C3E831EB4A597006E541D /* HMScanner.m */,
+				D19C3E841EB4A597006E541D /* HMScannerBorder.h */,
+				D19C3E851EB4A597006E541D /* HMScannerBorder.m */,
+				D19C3E861EB4A597006E541D /* HMScannerController.h */,
+				D19C3E871EB4A597006E541D /* HMScannerController.m */,
+				D19C3E881EB4A597006E541D /* HMScannerMaskView.h */,
+				D19C3E891EB4A597006E541D /* HMScannerMaskView.m */,
+				D19C3E8A1EB4A597006E541D /* HMScannerViewController.h */,
+				D19C3E8B1EB4A597006E541D /* HMScannerViewController.m */,
+			);
+			path = QRCode;
 			sourceTree = "<group>";
 		};
 		D1CFA0901EB218B1005B75F5 /* Refresh */ = {
@@ -1099,6 +1164,7 @@
 				D16563831EB30B0B00D82438 /* 体育直播~iphone@2x.png in Resources */,
 				D16563921EB30B0B00D82438 /* 特别号分析~iphone.png in Resources */,
 				D16563531EB30B0B00D82438 /* btn_setting_normal~iphone@2x.png in Resources */,
+				D19C3E9F1EB4A85D006E541D /* share_platform_wechat.png in Resources */,
 				D19C3E3F1EB45EB0006E541D /* tab4_1@3x.png in Resources */,
 				D16563611EB30B0B00D82438 /* load_error~iphone@2x.png in Resources */,
 				D16563841EB30B0B00D82438 /* 六合资料~iphone.png in Resources */,
@@ -1135,6 +1201,7 @@
 				D16563801EB30B0B00D82438 /* 体育比分~iphone.png in Resources */,
 				D11C7CED1EB1E6D100CE63E8 /* Contents.json in Resources */,
 				D16563761EB30B0B00D82438 /* user_center_icon~iphone.png in Resources */,
+				D19C3E971EB4A856006E541D /* share_platform_imessage.png in Resources */,
 				D16563451EB30B0B00D82438 /* bbtnback~iphone@2x.png in Resources */,
 				D19C3E3E1EB45EB0006E541D /* tab4_1@2x.png in Resources */,
 				D19C3E331EB45EB0006E541D /* tab2_1.png in Resources */,
@@ -1144,6 +1211,7 @@
 				D16563541EB30B0B00D82438 /* btn_setting_selected~iphone.png in Resources */,
 				D165634B1EB30B0B00D82438 /* btn_menu_normal~iphone@2x.png in Resources */,
 				D165636A1EB30B0B00D82438 /* networkRequestFail~iphone.png in Resources */,
+				D19C3E991EB4A856006E541D /* share_platform_qqfriends.png in Resources */,
 				D165635E1EB30B0B00D82438 /* kaijiangbg~iphone.png in Resources */,
 				D19C3E5B1EB46B20006E541D /* newiconp2@2x.png in Resources */,
 				D11C7CF31EB1E6D100CE63E8 /* gotoPic1@2x.png in Resources */,
@@ -1171,17 +1239,20 @@
 				D165636E1EB30B0B00D82438 /* pc蛋蛋~iphone.png in Resources */,
 				D16563A21EB30B0B00D82438 /* 足球比分~iphone.png in Resources */,
 				D16563781EB30B0B00D82438 /* username~iphone.png in Resources */,
+				D19C3EA01EB4A85D006E541D /* share_platform_wechat@2x.png in Resources */,
 				D170AE7B1EB1B2B8003668C0 /* Assets.xcassets in Resources */,
 				D19C3E6B1EB49039006E541D /* newicon3@2x.png in Resources */,
 				D165634F1EB30B0B00D82438 /* btn_profile_normal~iphone@2x.png in Resources */,
 				D19C3DFC1EB454B1006E541D /* indexicon5.png in Resources */,
 				D11C7CEF1EB1E6D100CE63E8 /* exit@2x.png in Resources */,
 				D19C3DFE1EB454B1006E541D /* indexicon5@3x.png in Resources */,
+				D19C3EA21EB4A85D006E541D /* share_platform_wechattimeline@2x.png in Resources */,
 				D16563591EB30B0B00D82438 /* button_higlitht~iphone@2x.png in Resources */,
 				D16563951EB30B0B00D82438 /* 用户反馈~iphone@2x.png in Resources */,
 				D19C3E581EB46B20006E541D /* newiconp1@2x.png in Resources */,
 				D16563811EB30B0B00D82438 /* 体育比分~iphone@2x.png in Resources */,
 				D16563621EB30B0B00D82438 /* mainCellBackground~iphone.png in Resources */,
+				D19C3EA11EB4A85D006E541D /* share_platform_wechattimeline.png in Resources */,
 				D16563731EB30B0B00D82438 /* refreshPic~iphone@2x.png in Resources */,
 				D165636C1EB30B0B00D82438 /* password~iphone.png in Resources */,
 				D16563851EB30B0B00D82438 /* 六合资料~iphone@2x.png in Resources */,
@@ -1197,6 +1268,8 @@
 				D19C3E461EB45EB7006E541D /* tab1_1.png in Resources */,
 				D165639C1EB30B0B00D82438 /* 绿~iphone.png in Resources */,
 				D16563601EB30B0B00D82438 /* load_error~iphone.png in Resources */,
+				D19C3E981EB4A856006E541D /* share_platform_imessage@2x.png in Resources */,
+				D19C3E9A1EB4A856006E541D /* share_platform_qqfriends@2x.png in Resources */,
 				D19C3E6A1EB49039006E541D /* newicon3.png in Resources */,
 				D16563461EB30B0B00D82438 /* btn_forum_normal~iphone.png in Resources */,
 				D16563471EB30B0B00D82438 /* btn_forum_normal~iphone@2x.png in Resources */,
@@ -1226,6 +1299,7 @@
 				D165639E1EB30B0B00D82438 /* 蓝~iphone.png in Resources */,
 				D16563741EB30B0B00D82438 /* share_icon~iphone.png in Resources */,
 				D19C3E341EB45EB0006E541D /* tab2_1@2x.png in Resources */,
+				D19C3E8D1EB4A597006E541D /* HMScanner.bundle in Resources */,
 				D19C3E001EB45577006E541D /* bg.png in Resources */,
 				D165637A1EB30B0B00D82438 /* vertificationBack~iphone.png in Resources */,
 				D19C3E411EB45EB0006E541D /* tab4_2@2x.png in Resources */,
@@ -1329,6 +1403,7 @@
 				D11C7C8E1EB1DA5800CE63E8 /* webViewController.m in Sources */,
 				D11C7C7C1EB1D4E700CE63E8 /* AppDelegate+Reachability.m in Sources */,
 				D170AEB61EB1D1D2003668C0 /* UIView+ScottAlertView.m in Sources */,
+				D19C3E921EB4A597006E541D /* HMScannerViewController.m in Sources */,
 				D16562D61EB305EE00D82438 /* WHDataModel.m in Sources */,
 				D16563B81EB379F600D82438 /* LotteryZoneDetailTableViewCell.m in Sources */,
 				D11C7C811EB1D50800CE63E8 /* WHProFileViewController.m in Sources */,
@@ -1346,7 +1421,9 @@
 				D19C3E771EB49B2F006E541D /* WHNoDataTableViewController.m in Sources */,
 				D19C3E4B1EB45F11006E541D /* WHShareToFriendController.m in Sources */,
 				D1CFA09B1EB218B1005B75F5 /* PMElasticView.m in Sources */,
+				D19C3E901EB4A597006E541D /* HMScannerController.m in Sources */,
 				D170AEB71EB1D1D2003668C0 /* UIView+ScottAutoLayout.m in Sources */,
+				D19C3E8F1EB4A597006E541D /* HMScannerBorder.m in Sources */,
 				D16563A61EB3164A00D82438 /* WHSixNewsController.m in Sources */,
 				D170AE981EB1CE1D003668C0 /* WHNewsViewController.m in Sources */,
 				D19C3E621EB4889B006E541D /* WHProFileTableViewCell.m in Sources */,
@@ -1356,9 +1433,12 @@
 				D11C7C9C1EB1E56500CE63E8 /* WKWaitingProgressHUD.m in Sources */,
 				D11C7C881EB1D91D00CE63E8 /* PXGetDataTool.m in Sources */,
 				D11C7C7E1EB1D4E700CE63E8 /* AppDelegate+UMengMobClick.m in Sources */,
+				D19C3E911EB4A597006E541D /* HMScannerMaskView.m in Sources */,
 				D19C3E4E1EB45FC1006E541D /* WHMoreFuncViewController.m in Sources */,
 				D170AE8C1EB1BCBE003668C0 /* WHTabBarController.m in Sources */,
 				D170AE701EB1B2B8003668C0 /* main.m in Sources */,
+				D19C3E8E1EB4A597006E541D /* HMScanner.m in Sources */,
+				D19C3E8C1EB4A597006E541D /* HMScanerCardViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

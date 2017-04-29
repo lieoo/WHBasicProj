@@ -25,6 +25,7 @@
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     self.navigationController.navigationBar.hidden = YES;
+    self.tabBarController.tabBar.hidden = NO;
 }
 
 - (void)viewDidLoad {
@@ -107,7 +108,7 @@
         [alert show];
         return;
     }
-    
+    sleep(1);
     if (![_userPswTF.text isEqualToString: @"appletest"] && ![_userPswTF.text isEqualToString:@"appletest"]) {
             UIAlertView *alert = [[UIAlertView alloc]initWithTitle:nil message:@"账号或者密码输入错误" delegate:nil cancelButtonTitle:@"好的" otherButtonTitles:nil, nil];
             [alert show];
