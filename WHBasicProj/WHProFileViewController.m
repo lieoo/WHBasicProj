@@ -7,13 +7,15 @@
 //
 
 #import "WHProFileViewController.h"
-
+#import "WHProFileTableViewCell.h"
+#import "WHNoDataTableViewController.h"
 @interface WHProFileViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic,strong)UITextField *userNameTF;
 @property (nonatomic,strong)UITextField *userPswTF;
 @property (nonatomic,strong)UITableView *tableView;
 @property (nonatomic,strong)NSMutableArray *dataSource;
+@property (nonatomic,strong)NSMutableArray *imageDataSource;
 @property (nonatomic,strong)UIButton *loginButton;
 
 @end
@@ -92,6 +94,7 @@
     [self.view addSubview:regisBtn];
 }
 - (void)setUpLogonUI{
+    
     [self.view addSubview:self.tableView];
 }
 
@@ -133,12 +136,24 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return _dataSource.count;
+    return self.dataSource.count;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"cell"];
-    cell.textLabel.text = [NSString stringWithFormat:@"%ld",(long)indexPath.row];
+    WHProFileTableViewCell *cell = [[WHProFileTableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"cell"];
+    cell.nameLabel.text = _dataSource[indexPath.row];
+    [cell.headImage setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@",_imageDataSource[indexPath.row]]]];
+    
     return cell;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 80;
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    WHNoDataTableViewController *vc = [[WHNoDataTableViewController alloc]init];
+    vc.noDataString = _dataSource[indexPath.row];
+    vc.title = _dataSource[indexPath.row];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 -(UITableView *)tableView{
     if (_tableView) return _tableView;
@@ -150,6 +165,14 @@
     tableView.tableFooterView = [[UIView alloc]init];
     _tableView = tableView;
     return  _tableView;
+}
+-(NSMutableArray *)dataSource{
+    if (_dataSource) return _dataSource;
+    NSMutableArray *dataSource = [NSMutableArray arrayWithArray:@[@"我的粉丝",@"我的关注"]];
+    NSMutableArray *imageSource = [NSMutableArray arrayWithArray:@[@"newicon3",@"newicon5"]];
+    _imageDataSource = imageSource;
+    _dataSource = dataSource;
+    return _dataSource;
 }
 -(UIView *)headerView{
     UIView *headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, DEVICEWIDTH, 250)];
@@ -177,7 +200,7 @@
     jobLabel.textColor = [UIColor whiteColor];
     [headerView addSubview:jobLabel];
     
-    UILabel *inviteLabel = [[UILabel alloc]initWithFrame:CGRectMake(DEVICEWIDTH - 150, 209, 140, 30)];
+    UILabel *inviteLabel = [[UILabel alloc]initWithFrame:CGRectMake(DEVICEWIDTH - 160, 209, 140, 30)];
     inviteLabel.text = @"邀请码: 43167071";
     inviteLabel.textColor = [UIColor whiteColor];
     inviteLabel.font = [UIFont systemFontOfSize:13];
