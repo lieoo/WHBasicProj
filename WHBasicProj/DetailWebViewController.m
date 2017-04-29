@@ -8,7 +8,7 @@
 
 #import "DetailWebViewController.h"
 
-@interface DetailWebViewController ()
+@interface DetailWebViewController ()<UIWebViewDelegate>
 
 @end
 
@@ -18,8 +18,24 @@
     [super viewDidLoad];
     self.navigationController.navigationBar.hidden = NO;
     
-    UIWebView *webView = [[UIWebView alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    UIWebView *webView = [[UIWebView alloc]initWithFrame:CGRectMake(0, 0, DEVICEWIDTH, DEVICEHEIGHT)];
     [self.view addSubview:webView];
+    webView.opaque = NO;
+    webView.backgroundColor = [UIColor whiteColor];
+    webView.delegate = self;
     [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.webString]]];
+}
+-(void)webViewDidStartLoad:(UIWebView *)webView{
+    NSLog(@"%s",__func__);
+}
+-(void)webViewDidFinishLoad:(UIWebView *)webView{
+    NSLog(@"%s",__func__);
+}
+-(void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
+    NSLog(@"%@",error);
+}
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.tabBarController.tabBar.hidden = YES;
 }
 @end

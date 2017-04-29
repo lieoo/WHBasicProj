@@ -27,7 +27,7 @@
 @property (nonatomic,strong)TXScrollLabelView *scrollLabelView;
 @property (nonatomic,strong)UIView *headerView;
 @property (nonatomic,strong)WHDataModel *model;
-
+@property (nonatomic,strong)UIButton *centerButton;
 @end
 
 @implementation WHNewsViewController
@@ -43,8 +43,9 @@
                                                                       UITextAttributeTextColor:[UIColor whiteColor],
                                                                       }];
     [self.view addSubview:self.cycleScrollView];
-    
+    [self.view addSubview:self.centerButton];
     [self setUpNetRequest];
+    [self setUpNavButton];
     
 //    [self setUpBanner];
     
@@ -66,7 +67,10 @@
         web.webUrlString = [[NSString alloc]initWithContentsOfURL:url encoding:NSUTF8StringEncoding error:nil];
         [self.navigationController pushViewController:web animated:YES];
     }else if (sender.tag == 3){
-        
+        DetailWebViewController *web = [[DetailWebViewController alloc]init];
+        web.webString = @"https://api.1396six.com/mobile/Voteinfoweb/27558";
+        web.title = @"生肖投票";
+        [self.navigationController pushViewController:web animated:YES];
     }else if (sender.tag == 4){
         GuessNumberViewController *g = [[GuessNumberViewController alloc]init];
         [self.navigationController pushViewController:g animated:YES];
@@ -79,11 +83,23 @@
         LotteryZoneViewController *lo = [[LotteryZoneViewController alloc]init];
         lo.title = @"彩票开奖专区";
         [self.navigationController pushViewController:lo animated:YES];
+    }else if (sender.tag == 7){
+        DetailWebViewController *web = [[DetailWebViewController alloc]init];
+        web.webString = @"https://api.1396six.com/mobile/Voteinfoweb/27560";
+        web.title = @"波色预测";
+        [self.navigationController pushViewController:web animated:YES];
+    }else if (sender.tag == 8){
+        DetailWebViewController *web = [[DetailWebViewController alloc]init];
+        web.webString = @"https://api.1396six.com/mobile/Voteinfoweb/27559";
+        web.title = @"波色单双预测";
+        [self.navigationController pushViewController:web animated:YES];
+
     }
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     self.navigationController.navigationBar.hidden = YES;
+    self.tabBarController.tabBar.hidden = NO;
 }
 -(void)setUpNetRequest{
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
@@ -134,9 +150,21 @@
         button.tag = index;
         [button setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
         button.imageEdgeInsets = UIEdgeInsetsMake(25, 25, 25, 25);
+        [button setBackgroundImage:[UIImage imageNamed:@"bg"] forState:UIControlStateNormal];
         [button setTitleColor:[UIColor blackColor]forState:UIControlStateNormal];
         button.backgroundColor = [UIColor whiteColor];
         label.text = _dataSource[index][@"label"];
+        if (index == 3) {
+            label.text = @"波色生肖投票";
+            [button setImage:[UIImage imageNamed:@"indexicon4"] forState:UIControlStateNormal];
+        }
+        if (index == 7) {
+            label.text = @"波色体育投票";
+        }
+        if (index == 8) {
+            label.text = @"波色单双投票";
+            [button setImage:[UIImage imageNamed:@"indexicon5"] forState:UIControlStateNormal];
+        }
         label.textAlignment = NSTextAlignmentCenter;
         label.font = [UIFont systemFontOfSize:14];
         int row = index / totalColumns;
@@ -155,6 +183,26 @@
         }];
     }
 }
+-(void)touchNavButton:(UIButton *)sender{
+    
+    if (sender.tag == 10) {
+        DetailWebViewController *web = [[DetailWebViewController alloc]init];
+        web.webString = @"https://api.1396six.com/mobile/live?token=122709d0c99842669b87bf9ea1a1f27a&rnd=0416";
+        web.title = @"开奖直播";
+        [self.navigationController pushViewController:web animated:YES];
+
+    }else if (sender.tag == 11){
+        DetailWebViewController *web = [[DetailWebViewController alloc]init];
+        web.webString = @"http://client.310win.com/aspx/ChartList.aspx?_t=1493444074.721861";
+        web.title = @"图表资料";
+        [self.navigationController pushViewController:web animated:YES];
+    }else{
+        DetailWebViewController *web = [[DetailWebViewController alloc]init];
+        web.webString = @"https://api.1396six.com/mobile/Statistics?c=100";
+        web.title = @"六合统计";
+        [self.navigationController pushViewController:web animated:YES];
+    }
+}
 -(TXScrollLabelView *)scrollLabelView{
     if (_scrollLabelView ) return _scrollLabelView;
     NSString *scrollTitle = @"周四302比赛推迟\n广西快3停售\n大乐透5亿加奖活动\n关于增加“鲁11选5”销售开奖期次公告";
@@ -164,31 +212,57 @@
     scrollLabelView.backgroundColor = [UIColor whiteColor];
     CGFloat bannerY;
     if (DEVICEWIDTH == 320) {
-        bannerY = 165;
+        bannerY = 135;
     }else{
-        bannerY = 205;
+        bannerY = 175;
     }
     scrollLabelView.frame = CGRectMake(0, bannerY, DEVICEWIDTH, 30);
     [scrollLabelView beginScrolling];
     _scrollLabelView = scrollLabelView;
     return _scrollLabelView;
 }
+- (void)setUpNavButton{
+    
+    CGFloat w = DEVICEWIDTH/3;
+    CGFloat bannerY;
+    if (DEVICEWIDTH == 320) {
+        bannerY = 155;
+    }else{
+        bannerY = 195;
+    }
+    NSArray *nameArray = @[@"开奖直播",@"免费资料",@"六合统计"];
+    
+    for (NSInteger i=0 ; i<3; i++) {
+        UIButton *btn = [[UIButton alloc]init];
+        btn.frame = CGRectMake((i*w)+50, bannerY, 30, 30);
+        btn.tag = 10+i;
+        [btn setImage:[UIImage imageNamed:[NSString stringWithFormat:@"nav%ld",i+1]] forState:UIControlStateNormal];
+        [btn addTarget:self action:@selector(touchNavButton:) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:btn];
+        
+        UILabel *label = [[UILabel alloc]init];
+        label.frame = CGRectMake(btn.mj_x-10, btn.mj_y+20, 50, 30);
+        label.text = [NSString stringWithFormat:@"%@",nameArray[i]];
+        label.textAlignment = NSTextAlignmentCenter;
+        label.font = [UIFont systemFontOfSize:12];
+        [self.view addSubview:label];
+    }
+}
 - (SDCycleScrollView*)cycleScrollView{
     if (_cycleScrollView) return _cycleScrollView;
     CGFloat cycleH;
     if (DEVICEWIDTH == 320) {
-        cycleH = 190;
+        cycleH = 150;
     }else{
-        cycleH = 247;
+        cycleH = 207;
     }
-//    SDCycleScrollView *cycleScrollView = [[SDCycleScrollView alloc]initWithFrame:CGRectMake(0, 0, DEVICEWIDTH,cycleH)];
     SDCycleScrollView *cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, DEVICEWIDTH, cycleH) imageURLStringsGroup:self.imgArray];
     cycleScrollView.autoScrollTimeInterval = 2.5;
     cycleScrollView.delegate = self;
-//    cycleScrollView.dotColor = [UIColor blueColor];
     cycleScrollView.showPageControl = NO;
     cycleScrollView.backgroundColor = [UIColor whiteColor];
     _cycleScrollView = cycleScrollView;
+    
     return _cycleScrollView;
 }
 //

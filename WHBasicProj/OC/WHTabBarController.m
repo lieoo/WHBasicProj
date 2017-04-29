@@ -24,18 +24,23 @@
     NSArray *childItemsArray = @[
                                  @{kClassKey  : @"WHNewsViewController",
                                    kTitleKey  : @"资讯",
-                                   kImgKey    : @"TabMessageIcon",
-                                   kSelImgKey : @"TabMessageIcon"},
-                                 
-                                 @{kClassKey  : @"GuessNumberViewController",
-                                   kTitleKey  : @"号码预测",
-                                   kImgKey    : @"profile-group-icon",
-                                   kSelImgKey : @"profile-group-icon"},
+                                   kImgKey    : @"tab1_1",
+                                   kSelImgKey : @"tab1_2"},
                                  
                                  @{kClassKey  : @"WHProFileViewController",
-                                   kTitleKey  : @"我的",
-                                   kImgKey    : @"profile-group-icon",
-                                   kSelImgKey : @"profile-group-icon"}
+                                   kTitleKey  : @"个人中心",
+                                   kImgKey    : @"tab2_1",
+                                   kSelImgKey : @"tab2_2"},
+                                 
+                                 @{kClassKey  : @"WHShareToFriendController",
+                                   kTitleKey  : @"分享给好友",
+                                   kImgKey    : @"tab3_1",
+                                   kSelImgKey : @"tab3_2"},
+                                 
+                                 @{kClassKey  : @"WHMoreFuncViewController",
+                                   kTitleKey  : @"更多",
+                                   kImgKey    : @"tab4_1",
+                                   kSelImgKey : @"tab4_2"}
                                  ];
     
     
