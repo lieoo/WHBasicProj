@@ -165,6 +165,9 @@
 		D170AEB61EB1D1D2003668C0 /* UIView+ScottAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = D170AEAB1EB1D1D2003668C0 /* UIView+ScottAlertView.m */; };
 		D170AEB71EB1D1D2003668C0 /* UIView+ScottAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D170AEAD1EB1D1D2003668C0 /* UIView+ScottAutoLayout.m */; };
 		D170AEB81EB1D1D2003668C0 /* ScottAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D170AEAF1EB1D1D2003668C0 /* ScottAlertViewController.m */; };
+		D172F5A61EB6F67500A47FD2 /* 免责声明.html in Resources */ = {isa = PBXBuildFile; fileRef = D172F5A51EB6F67400A47FD2 /* 免责声明.html */; };
+		D172F5A81EB6FF7400A47FD2 /* AppIcons40x40.png in Resources */ = {isa = PBXBuildFile; fileRef = D172F5A71EB6FF7400A47FD2 /* AppIcons40x40.png */; };
+		D172F5AA1EB7021500A47FD2 /* Group.png in Resources */ = {isa = PBXBuildFile; fileRef = D172F5A91EB7021500A47FD2 /* Group.png */; };
 		D17527451EB4531C003C0224 /* indexicon4.png in Resources */ = {isa = PBXBuildFile; fileRef = D17527421EB4531C003C0224 /* indexicon4.png */; };
 		D17527461EB4531C003C0224 /* indexicon4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D17527431EB4531C003C0224 /* indexicon4@2x.png */; };
 		D17527471EB4531C003C0224 /* indexicon4@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D17527441EB4531C003C0224 /* indexicon4@3x.png */; };
@@ -210,7 +213,6 @@
 		D19C3E481EB45EB7006E541D /* tab3_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D19C3E451EB45EB7006E541D /* tab3_2@2x.png */; };
 		D19C3E4B1EB45F11006E541D /* WHShareToFriendController.m in Sources */ = {isa = PBXBuildFile; fileRef = D19C3E4A1EB45F11006E541D /* WHShareToFriendController.m */; };
 		D19C3E4E1EB45FC1006E541D /* WHMoreFuncViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D19C3E4D1EB45FC1006E541D /* WHMoreFuncViewController.m */; };
-		D19C3E501EB46783006E541D /* AppIcons40x40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D19C3E4F1EB46783006E541D /* AppIcons40x40@3x.png */; };
 		D19C3E571EB46B20006E541D /* newiconp1.png in Resources */ = {isa = PBXBuildFile; fileRef = D19C3E511EB46B20006E541D /* newiconp1.png */; };
 		D19C3E581EB46B20006E541D /* newiconp1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D19C3E521EB46B20006E541D /* newiconp1@2x.png */; };
 		D19C3E591EB46B20006E541D /* newiconp1@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D19C3E531EB46B20006E541D /* newiconp1@3x.png */; };
@@ -466,6 +468,9 @@
 		D170AEAD1EB1D1D2003668C0 /* UIView+ScottAutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ScottAutoLayout.m"; sourceTree = "<group>"; };
 		D170AEAE1EB1D1D2003668C0 /* ScottAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScottAlertViewController.h; sourceTree = "<group>"; };
 		D170AEAF1EB1D1D2003668C0 /* ScottAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScottAlertViewController.m; sourceTree = "<group>"; };
+		D172F5A51EB6F67400A47FD2 /* 免责声明.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "免责声明.html"; sourceTree = "<group>"; };
+		D172F5A71EB6FF7400A47FD2 /* AppIcons40x40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AppIcons40x40.png; path = ../AppIcons40x40.png; sourceTree = "<group>"; };
+		D172F5A91EB7021500A47FD2 /* Group.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Group.png; sourceTree = "<group>"; };
 		D17527421EB4531C003C0224 /* indexicon4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = indexicon4.png; sourceTree = "<group>"; };
 		D17527431EB4531C003C0224 /* indexicon4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "indexicon4@2x.png"; sourceTree = "<group>"; };
 		D17527441EB4531C003C0224 /* indexicon4@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "indexicon4@3x.png"; sourceTree = "<group>"; };
@@ -513,7 +518,6 @@
 		D19C3E4A1EB45F11006E541D /* WHShareToFriendController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHShareToFriendController.m; sourceTree = "<group>"; };
 		D19C3E4C1EB45FC1006E541D /* WHMoreFuncViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHMoreFuncViewController.h; sourceTree = "<group>"; };
 		D19C3E4D1EB45FC1006E541D /* WHMoreFuncViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHMoreFuncViewController.m; sourceTree = "<group>"; };
-		D19C3E4F1EB46783006E541D /* AppIcons40x40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AppIcons40x40@3x.png"; path = "OC/AppIcons40x40@3x.png"; sourceTree = "<group>"; };
 		D19C3E511EB46B20006E541D /* newiconp1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newiconp1.png; sourceTree = "<group>"; };
 		D19C3E521EB46B20006E541D /* newiconp1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "newiconp1@2x.png"; sourceTree = "<group>"; };
 		D19C3E531EB46B20006E541D /* newiconp1@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "newiconp1@3x.png"; sourceTree = "<group>"; };
@@ -763,6 +767,9 @@
 		D16562D71EB30B0B00D82438 /* ImageSource */ = {
 			isa = PBXGroup;
 			children = (
+				D172F5A91EB7021500A47FD2 /* Group.png */,
+				D172F5A71EB6FF7400A47FD2 /* AppIcons40x40.png */,
+				D172F5A51EB6F67400A47FD2 /* 免责声明.html */,
 				D19C3EBF1EB4CD9A006E541D /* cleardisk@2x.png */,
 				D19C3EC01EB4CD9A006E541D /* cleardisk@3x.png */,
 				D19C3EB31EB4CD5E006E541D /* newicon_0001_6.png */,
@@ -975,7 +982,6 @@
 			children = (
 				D170AE881EB1B8A6003668C0 /* WHProjHeaderPCH.h */,
 				D170AE891EB1BCA0003668C0 /* OC */,
-				D19C3E4F1EB46783006E541D /* AppIcons40x40@3x.png */,
 				D170AE961EB1CE1D003668C0 /* WHNewsViewController.h */,
 				D170AE971EB1CE1D003668C0 /* WHNewsViewController.m */,
 				D19C3E491EB45F11006E541D /* WHShareToFriendController.h */,
@@ -1227,6 +1233,7 @@
 				D16563841EB30B0B00D82438 /* 六合资料~iphone.png in Resources */,
 				D16563431EB30B0B00D82438 /* banner_Picture_1~iphone@2x.png in Resources */,
 				D19C3E351EB45EB0006E541D /* tab2_2.png in Resources */,
+				D172F5AA1EB7021500A47FD2 /* Group.png in Resources */,
 				D19C3E361EB45EB0006E541D /* tab2_2@2x.png in Resources */,
 				D165635D1EB30B0B00D82438 /* cancel~iphone@2x.png in Resources */,
 				D19C3EC21EB4CD9A006E541D /* cleardisk@3x.png in Resources */,
@@ -1239,6 +1246,7 @@
 				D16563641EB30B0B00D82438 /* NavigationBar64~iphone.png in Resources */,
 				D19C3EAE1EB4CCE4006E541D /* newicon1.png in Resources */,
 				D19C3E591EB46B20006E541D /* newiconp1@3x.png in Resources */,
+				D172F5A81EB6FF7400A47FD2 /* AppIcons40x40.png in Resources */,
 				D19C3E121EB456B1006E541D /* nav2@3x.png in Resources */,
 				D16563401EB30B0B00D82438 /* backImage_w~iphone.png in Resources */,
 				D165636F1EB30B0B00D82438 /* pc蛋蛋~iphone@2x.png in Resources */,
@@ -1368,6 +1376,7 @@
 				D19C3E341EB45EB0006E541D /* tab2_1@2x.png in Resources */,
 				D19C3E8D1EB4A597006E541D /* HMScanner.bundle in Resources */,
 				D19C3E001EB45577006E541D /* bg.png in Resources */,
+				D172F5A61EB6F67500A47FD2 /* 免责声明.html in Resources */,
 				D165637A1EB30B0B00D82438 /* vertificationBack~iphone.png in Resources */,
 				D19C3E411EB45EB0006E541D /* tab4_2@2x.png in Resources */,
 				D165639D1EB30B0B00D82438 /* 绿~iphone@2x.png in Resources */,
@@ -1381,7 +1390,6 @@
 				D16563411EB30B0B00D82438 /* backImage_w~iphone@2x.png in Resources */,
 				D19C3E391EB45EB0006E541D /* tab3_1@2x.png in Resources */,
 				D16563681EB30B0B00D82438 /* navigationbar_arrow_up~iphone.png in Resources */,
-				D19C3E501EB46783006E541D /* AppIcons40x40@3x.png in Resources */,
 				D16563721EB30B0B00D82438 /* refreshPic~iphone.png in Resources */,
 				D16563771EB30B0B00D82438 /* user_center_icon~iphone@2x.png in Resources */,
 				D19C3E071EB456A9006E541D /* nav1@2x.png in Resources */,

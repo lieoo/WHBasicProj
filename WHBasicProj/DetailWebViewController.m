@@ -18,7 +18,7 @@
     [super viewDidLoad];
     self.navigationController.navigationBar.hidden = NO;
     
-    UIWebView *webView = [[UIWebView alloc]initWithFrame:CGRectMake(0, 0, DEVICEWIDTH, DEVICEHEIGHT)];
+    UIWebView *webView = [[UIWebView alloc]initWithFrame:[UIScreen mainScreen].bounds];
     [self.view addSubview:webView];
     webView.opaque = NO;
     webView.backgroundColor = [UIColor whiteColor];

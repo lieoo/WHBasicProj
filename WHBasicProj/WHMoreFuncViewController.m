@@ -9,6 +9,7 @@
 #import "WHMoreFuncViewController.h"
 #import "WHProFileTableViewCell.h"
 #import "WHFeedBackViewController.h"
+#import "WHSixWebViewDetailController.h"
 @interface WHMoreFuncViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic,strong)UITableView *tableView;
@@ -47,11 +48,31 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    if (indexPath.row == 1) {
+    if (indexPath.row == 0) {
+        WHSixWebViewDetailController *web = [[WHSixWebViewDetailController alloc]init];
+        web.isHTMLString = YES;
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"免责声明" ofType:@"html"];
+        NSString *htmlString = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+        web.webUrlString = htmlString;
+        [self.navigationController pushViewController:web animated:YES];
+    }else if (indexPath.row == 1) {
         [self.navigationController pushViewController:[WHFeedBackViewController new] animated:YES];
+    }else if (indexPath.row == 2){
+        sleep(1);
+        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        sleep(.5);
+        hud.label.text = @"清理缓存成功!";
+        [hud hideAnimated:YES afterDelay:1];
+    }else if (indexPath.row == 3){
+        WHSixWebViewDetailController *web = [WHSixWebViewDetailController new];
+        web.webUrlString = @"http://client.310win.com/files/plays/play_5.html?_t=1493615569.616586";
+        [self.navigationController pushViewController:web animated:YES];
     }
 }
-
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.tabBarController.tabBar.hidden = NO;
+}
 - (CGFloat)folderSizeAtPath:(NSString *)path{
     // 利用NSFileManager实现对文件的管理
     NSFileManager *manager = [NSFileManager defaultManager];
@@ -88,7 +109,7 @@
     if (_dataArray) return _dataArray;
     NSMutableArray *dataSource = [NSMutableArray array];
     
-    [dataSource addObjectsFromArray:@[@"免责声明",@"意见反馈",@"清理缓存",@"帮助中心",@"关于应用"]];
+    [dataSource addObjectsFromArray:@[@"免责声明",@"意见反馈",@"清理缓存",@"玩法规则"]];
     NSMutableArray *imageDataSour = [NSMutableArray array];
     [imageDataSour addObjectsFromArray:@[@"newicon1",@"newicon2",@"newicon_0001_6",@"cleardisk",@"newicon_0002_5"]];
     _imageDataArray = imageDataSour;
