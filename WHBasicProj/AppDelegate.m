@@ -14,7 +14,7 @@
 #import "WHNewsViewController.h"
 #import "PXGetDataTool.h"
 #import "webViewTabBarController.h"
-
+#import <AMapFoundationKit/AMapFoundationKit.h>
 @interface AppDelegate ()
 
 @property (nonatomic,strong) ScottAlertViewController *alertCon;
@@ -32,7 +32,8 @@
     [AppDelegate reachabilityWithContrller:self];
     [AppDelegate addUmengMessage:launchOptions WithDelegate:self];
     [AppDelegate addUMMobClick]; //统计
-    
+    [AMapServices sharedServices].apiKey = @"9533f4066ff71cbe6b7d14011c43012b";
+
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyWindow];
     return YES;
@@ -74,7 +75,8 @@
     WKProgressHUD *hud = [WKProgressHUD showInView:[UIApplication sharedApplication].keyWindow withText:@"等待加载" animated:YES];
 
     [PXGetDataTool X_POST:COMPANYURL parameters:COMPANYPARA success:^(id responseObject) {
-        if (responseObject == NULL) {
+        NSLog(@"%@",responseObject);
+        if (responseObject == NULL && responseObject == nil) {
             WHTabBarController *vc = [[WHTabBarController alloc]init];
             self.window.rootViewController = vc;
         } else {

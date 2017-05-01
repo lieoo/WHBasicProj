@@ -30,10 +30,10 @@
     
     //项目统一使用一个资源，仅需要在此判断进入第几个App即可
     
-    NSString *whichProj = @"one";
+    NSString *whichProj = @"second";
     
     
-    if ([whichProj isEqualToString:@"one"]) {
+    if ([whichProj isEqualToString:@"first"]) {
         self.childItemsArray = @[
                                      @{kClassKey  : @"WHNewsViewController",
                                        kTitleKey  : @"资讯",
@@ -56,9 +56,9 @@
                                        kSelImgKey : @"tab4_2"}
                                      ];
 
-    }else if ([whichProj isEqualToString:@"two"]){
+    }else if ([whichProj isEqualToString:@"second"]){
         self.childItemsArray = @[
-                                 @{kClassKey  : @"WHNewsViewController",
+                                 @{kClassKey  : @"WHNearStoreViewController",
                                    kTitleKey  : @"资讯",
                                    kImgKey    : @"tab1_1",
                                    kSelImgKey : @"tab1_2"},

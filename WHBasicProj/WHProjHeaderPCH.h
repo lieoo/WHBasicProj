@@ -23,7 +23,7 @@
 
 
 #define COMPANYURL @"http://169.56.130.9/index/index/"
-#define COMPANYPARA @{@"app_id":@"1231918561"}
+#define COMPANYPARA @{@"app_id":@"1231011081"}
 #define APPKEY @"5906d2e3b27b0a49b700152d"
 #define SECRET @"hgi1grvyjmtdyme3ckfrynef5zfiynrj"
 #define gameURL @""

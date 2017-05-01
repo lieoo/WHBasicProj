@@ -7,8 +7,14 @@
 //
 
 #import "WHNearStoreViewController.h"
+#import <AMapFoundationKit/AMapFoundationKit.h>
+#import <AMapLocationKit/AMapLocationKit.h>
 
-@interface WHNearStoreViewController ()
+#define DefaultLocationTimeout 10
+#define DefaultReGeocodeTimeout 5
+
+@interface WHNearStoreViewController ()<AMapLocationManagerDelegate>
+@property (nonatomic, strong) AMapLocationManager *locationManager;
 
 @end
 
@@ -17,21 +23,42 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self configLocationManager];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)configLocationManager
+{
+    self.locationManager = [[AMapLocationManager alloc] init];
+    [self.locationManager setDelegate:self];
+    [self.locationManager setPausesLocationUpdatesAutomatically:NO];
+    [self.locationManager setAllowsBackgroundLocationUpdates:YES];
+    [self.locationManager setLocationTimeout:DefaultLocationTimeout];
+    [self.locationManager setReGeocodeTimeout:DefaultReGeocodeTimeout];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)startSerialLocation
+{
+    //开始定位
+    [self.locationManager startUpdatingLocation];
 }
-*/
+
+- (void)stopSerialLocation
+{
+    //停止定位
+    [self.locationManager stopUpdatingLocation];
+}
+
+- (void)amapLocationManager:(AMapLocationManager *)manager didFailWithError:(NSError *)error
+{
+    //定位错误
+    NSLog(@"%s, amapLocationManager = %@, error = %@", __func__, [manager class], error);
+}
+
+- (void)amapLocationManager:(AMapLocationManager *)manager didUpdateLocation:(CLLocation *)location
+{
+    //定位结果
+    NSLog(@"location:{lat:%f; lon:%f; accuracy:%f}", location.coordinate.latitude, location.coordinate.longitude, location.horizontalAccuracy);
+}
+
 
 @end
