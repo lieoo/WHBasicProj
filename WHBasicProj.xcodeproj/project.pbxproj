@@ -1168,7 +1168,7 @@
 				TargetAttributes = {
 					D170AE6A1EB1B2B8003668C0 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = XL24MERRUR;
+						DevelopmentTeam = 6LPD2MKK66;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -1635,7 +1635,7 @@
 			baseConfigurationReference = A55699F5FCAFE07ABB31F45D /* Pods-WHBasicProj.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = XL24MERRUR;
+				DEVELOPMENT_TEAM = 6LPD2MKK66;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/WHBasicProj/WHProjHeaderPCH.h";
 				INFOPLIST_FILE = WHBasicProj/Info.plist;
@@ -1651,7 +1651,7 @@
 			baseConfigurationReference = 5BEDE3522C61B6C52C2AF98E /* Pods-WHBasicProj.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = XL24MERRUR;
+				DEVELOPMENT_TEAM = 6LPD2MKK66;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/WHBasicProj/WHProjHeaderPCH.h";
 				INFOPLIST_FILE = WHBasicProj/Info.plist;

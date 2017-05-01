@@ -118,7 +118,12 @@
     WHSixWebViewDetailController *web = [[WHSixWebViewDetailController alloc]init];
     web.webUrlString = string;
     web.title = _dataSource[tag][@"content"];
-    if (tag == 8) return;
+    if (tag == 8) {
+        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        hud.label.text = @"暂未开放!敬请期待!";
+        [hud hideAnimated:YES afterDelay:1.5];
+        return;
+    }
     [self.navigationController pushViewController:web animated:YES];
 }
 

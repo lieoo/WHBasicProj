@@ -20,4 +20,9 @@ typedef void(^failureBlock)(NSURLSessionDataTask * task, NSError *error);
 //判断开关是否打开
 + (NSURLSessionDataTask *)opinionSwitchisOn:(NSString *)urlStr parameters:(NSDictionary *)dict progress:(progressBlock)progress success:(successBlock)success failure:(failureBlock)failure;
 
+
++ (NSURLSessionDataTask *)X_POST:(NSString *)URLString
+                      parameters:(id)parameters
+                         success:(void (^)(id responseObject))success
+                         failure:(void (^)(NSError *error))failure;
 @end

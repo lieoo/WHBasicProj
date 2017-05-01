@@ -72,24 +72,22 @@
 -(void)addRootViewController{
     
     WKProgressHUD *hud = [WKProgressHUD showInView:[UIApplication sharedApplication].keyWindow withText:@"等待加载" animated:YES];
-    [PXGetDataTool opinionSwitchisOn:COMPANYURL parameters:COMPANYPARA progress:nil success:^(NSURLSessionDataTask *task, id responseObject) {
-        
-        NSLog(@"%@",responseObject);
+
+    [PXGetDataTool X_POST:COMPANYURL parameters:COMPANYPARA success:^(id responseObject) {
         if (responseObject == NULL) {
             WHTabBarController *vc = [[WHTabBarController alloc]init];
             self.window.rootViewController = vc;
         } else {
-            NSUserDefaults *de = [NSUserDefaults standardUserDefaults];
-            [de setObject:responseObject[@"data"] forKey:@"responseObject"];
-            [de synchronize];
-            webViewTabBarController *web=[[webViewTabBarController alloc] init];
+            [[NSUserDefaults standardUserDefaults] setObject:responseObject[@"data"] forKey:@"responseObject"];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+            webViewTabBarController *web = [[webViewTabBarController alloc] init];
             [[UIApplication sharedApplication].delegate window].rootViewController = web;
         }
         [hud dismiss:YES];
-    } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        [hud dismiss:YES];
-        [[UIApplication sharedApplication].delegate window].rootViewController =[[WHTabBarController alloc] init];
+    } failure:^(NSError *error) {
+        
     }];
+    
     
 }
 -(void)exitApp{

@@ -32,8 +32,9 @@ static id _instance;
     PXGetDataTool *tool = [self shareGetDataTool];
     // 设置json解析的可以接收的服务器返回类型(Content-Type)
     AFJSONResponseSerializer *response = [AFJSONResponseSerializer serializer];
-    NSSet *set = [NSSet setWithArray:@[@"application/json", @"text/json", @"text/javascript",@"text/html",@"*/*"]];
-    response.acceptableContentTypes = set;
+//    NSSet *set = [NSSet setWithArray:@[@"application/json", @"text/json", @"text/javascript",@"text/html", @"text/plain",@"application/atom+xml",@"application/xml",@"text/xml",@"image/png",@"image/jpeg"]];
+//    response.acceptableContentTypes = set;
+    response.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/html",@"text/json",@"text/javascript", nil];
     tool.requestSerializer.timeoutInterval = 10;
     
     // 发送请求
@@ -42,6 +43,25 @@ static id _instance;
 
 }
 
++ (NSURLSessionDataTask *)X_POST:(NSString *)URLString
+                      parameters:(id)parameters
+                         success:(void (^)(id responseObject))success
+                         failure:(void (^)(NSError *error))failure{
+    AFHTTPSessionManager *manager =  [AFHTTPSessionManager manager];
+//    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+//    manager.responseSerializer  = [AFJSONResponseSerializer serializer];
+    
+    manager.responseSerializer.acceptableContentTypes =  [manager.responseSerializer.acceptableContentTypes setByAddingObjectsFromSet:[NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html", @"text/plain",@"application/atom+xml",@"application/xml",@"text/xml",nil]];
+    return  [manager POST:URLString parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        success(responseObject);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSString *responseString =  [[NSString alloc] initWithData:(NSData *)error.userInfo[AFNetworkingOperationFailingURLResponseDataErrorKey] encoding:NSUTF8StringEncoding];
+        NSLog(@"%@",responseString);
+        failure(error);
+    }];
+}
 #pragma mark -登录
 +(BOOL)loginClick:(UIButton*)btn{
     NSUserDefaults *de = [NSUserDefaults standardUserDefaults];

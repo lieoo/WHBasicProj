@@ -97,7 +97,7 @@
     NSDictionary*data = [de objectForKey:@"responseObject"];
     
     NSString *userAgent = [_webView stringByEvaluatingJavaScriptFromString:@"navigator.userAgent"];
-    userAgent = [userAgent stringByAppendingString:@" Version/7.0 Safari/9537.53"];
+    userAgent = [userAgent stringByAppendingString:@"Version/7.0 Safari/9537.53"];
     [[NSUserDefaults standardUserDefaults] registerDefaults:@{@"UserAgent": userAgent}];
     
     //转义网址
