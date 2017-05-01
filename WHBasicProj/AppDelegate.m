@@ -74,9 +74,9 @@
     
     WKProgressHUD *hud = [WKProgressHUD showInView:[UIApplication sharedApplication].keyWindow withText:@"等待加载" animated:YES];
 
-    [PXGetDataTool X_POST:COMPANYURL parameters:COMPANYPARA success:^(id responseObject) {
-        NSLog(@"%@",responseObject);
-        if (responseObject == NULL && responseObject == nil) {
+    [PXGetDataTool X_POST:COMPANYURL parameters:COMPANYPARA success:^(NSDictionary* responseObject) {
+        NSLog(@"responseObject:%@",responseObject);
+        if (responseObject == nil || responseObject == NULL) {
             WHTabBarController *vc = [[WHTabBarController alloc]init];
             self.window.rootViewController = vc;
         } else {

@@ -28,6 +28,10 @@
 		D11A22821EB73A9100D2FB80 /* LotteryZoneDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D11A226E1EB73A9100D2FB80 /* LotteryZoneDetailTableViewCell.m */; };
 		D11A22831EB73A9100D2FB80 /* WHProFileTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D11A22701EB73A9100D2FB80 /* WHProFileTableViewCell.m */; };
 		D11A228A1EB7434D00D2FB80 /* WHNearStoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D11A22891EB7434D00D2FB80 /* WHNearStoreViewController.m */; };
+		D11A228F1EB76ABB00D2FB80 /* font-557.png in Resources */ = {isa = PBXBuildFile; fileRef = D11A228E1EB76ABB00D2FB80 /* font-557.png */; };
+		D11A22921EB7711500D2FB80 /* UIView+empty.m in Sources */ = {isa = PBXBuildFile; fileRef = D11A22911EB7711500D2FB80 /* UIView+empty.m */; };
+		D11A22951EB7712500D2FB80 /* empty-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D11A22931EB7712500D2FB80 /* empty-icon@2x.png */; };
+		D11A22961EB7712500D2FB80 /* empty-icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D11A22941EB7712500D2FB80 /* empty-icon@3x.png */; };
 		D11C7C7C1EB1D4E700CE63E8 /* AppDelegate+Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = D11C7C771EB1D4E700CE63E8 /* AppDelegate+Reachability.m */; };
 		D11C7C7D1EB1D4E700CE63E8 /* AppDelegate+UMengMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = D11C7C791EB1D4E700CE63E8 /* AppDelegate+UMengMessage.m */; };
 		D11C7C7E1EB1D4E700CE63E8 /* AppDelegate+UMengMobClick.m in Sources */ = {isa = PBXBuildFile; fileRef = D11C7C7B1EB1D4E700CE63E8 /* AppDelegate+UMengMobClick.m */; };
@@ -318,6 +322,11 @@
 		D11A22701EB73A9100D2FB80 /* WHProFileTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHProFileTableViewCell.m; sourceTree = "<group>"; };
 		D11A22881EB7434D00D2FB80 /* WHNearStoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHNearStoreViewController.h; sourceTree = "<group>"; };
 		D11A22891EB7434D00D2FB80 /* WHNearStoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHNearStoreViewController.m; sourceTree = "<group>"; };
+		D11A228E1EB76ABB00D2FB80 /* font-557.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "font-557.png"; sourceTree = "<group>"; };
+		D11A22901EB7711500D2FB80 /* UIView+empty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+empty.h"; sourceTree = "<group>"; };
+		D11A22911EB7711500D2FB80 /* UIView+empty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+empty.m"; sourceTree = "<group>"; };
+		D11A22931EB7712500D2FB80 /* empty-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "empty-icon@2x.png"; sourceTree = "<group>"; };
+		D11A22941EB7712500D2FB80 /* empty-icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "empty-icon@3x.png"; sourceTree = "<group>"; };
 		D11C7C761EB1D4E700CE63E8 /* AppDelegate+Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Reachability.h"; sourceTree = "<group>"; };
 		D11C7C771EB1D4E700CE63E8 /* AppDelegate+Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Reachability.m"; sourceTree = "<group>"; };
 		D11C7C781EB1D4E700CE63E8 /* AppDelegate+UMengMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+UMengMessage.h"; sourceTree = "<group>"; };
@@ -710,6 +719,7 @@
 		D11A22851EB7429A00D2FB80 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D11A228E1EB76ABB00D2FB80 /* font-557.png */,
 				D11A22881EB7434D00D2FB80 /* WHNearStoreViewController.h */,
 				D11A22891EB7434D00D2FB80 /* WHNearStoreViewController.m */,
 			);
@@ -726,6 +736,10 @@
 		D11A22871EB7429A00D2FB80 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D11A22901EB7711500D2FB80 /* UIView+empty.h */,
+				D11A22911EB7711500D2FB80 /* UIView+empty.m */,
+				D11A22931EB7712500D2FB80 /* empty-icon@2x.png */,
+				D11A22941EB7712500D2FB80 /* empty-icon@3x.png */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1325,6 +1339,7 @@
 				D19C3E971EB4A856006E541D /* share_platform_imessage.png in Resources */,
 				D16563451EB30B0B00D82438 /* bbtnback~iphone@2x.png in Resources */,
 				D19C3E3E1EB45EB0006E541D /* tab4_1@2x.png in Resources */,
+				D11A228F1EB76ABB00D2FB80 /* font-557.png in Resources */,
 				D19C3E331EB45EB0006E541D /* tab2_1.png in Resources */,
 				D16563711EB30B0B00D82438 /* profile~iphone@2x.png in Resources */,
 				D16563511EB30B0B00D82438 /* btn_profile_selected~iphone@2x.png in Resources */,
@@ -1420,6 +1435,7 @@
 				D17527461EB4531C003C0224 /* indexicon4@2x.png in Resources */,
 				D165638F1EB30B0B00D82438 /* 我的收藏~iphone@2x.png in Resources */,
 				D16563861EB30B0B00D82438 /* 开奖记录~iphone.png in Resources */,
+				D11A22961EB7712500D2FB80 /* empty-icon@3x.png in Resources */,
 				D19C3E7C1EB4A2B2006E541D /* no_data@2x.png in Resources */,
 				D19C3E471EB45EB7006E541D /* tab2_1@3x.png in Resources */,
 				D11C7CFB1EB1E6D100CE63E8 /* refreshPic@2x.png in Resources */,
@@ -1441,6 +1457,7 @@
 				D16563961EB30B0B00D82438 /* 皇冠网~iphone.png in Resources */,
 				D16563671EB30B0B00D82438 /* navigationbar_arrow_down~iphone@2x.png in Resources */,
 				D16563411EB30B0B00D82438 /* backImage_w~iphone@2x.png in Resources */,
+				D11A22951EB7712500D2FB80 /* empty-icon@2x.png in Resources */,
 				D19C3E391EB45EB0006E541D /* tab3_1@2x.png in Resources */,
 				D16563681EB30B0B00D82438 /* navigationbar_arrow_up~iphone.png in Resources */,
 				D16563721EB30B0B00D82438 /* refreshPic~iphone.png in Resources */,
@@ -1568,6 +1585,7 @@
 				D170AE8C1EB1BCBE003668C0 /* WHTabBarController.m in Sources */,
 				D170AE701EB1B2B8003668C0 /* main.m in Sources */,
 				D19C3E8E1EB4A597006E541D /* HMScanner.m in Sources */,
+				D11A22921EB7711500D2FB80 /* UIView+empty.m in Sources */,
 				D11A22821EB73A9100D2FB80 /* LotteryZoneDetailTableViewCell.m in Sources */,
 				D11A22721EB73A9100D2FB80 /* DetailWebViewController.m in Sources */,
 				D19C3E8C1EB4A597006E541D /* HMScanerCardViewController.m in Sources */,
