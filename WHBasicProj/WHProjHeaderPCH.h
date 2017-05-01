@@ -27,6 +27,7 @@
 #define APPKEY @"5906d2e3b27b0a49b700152d"
 #define SECRET @"hgi1grvyjmtdyme3ckfrynef5zfiynrj"
 #define gameURL @""
+#define AMapKey @"9533f4066ff71cbe6b7d14011c43012b"
 
 
 #define DEVICEWIDTH [UIScreen mainScreen].bounds.size.width

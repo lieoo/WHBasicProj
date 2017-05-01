@@ -27,6 +27,7 @@
 		D11A22811EB73A9100D2FB80 /* WHDataSixDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D11A226B1EB73A9100D2FB80 /* WHDataSixDetailModel.m */; };
 		D11A22821EB73A9100D2FB80 /* LotteryZoneDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D11A226E1EB73A9100D2FB80 /* LotteryZoneDetailTableViewCell.m */; };
 		D11A22831EB73A9100D2FB80 /* WHProFileTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D11A22701EB73A9100D2FB80 /* WHProFileTableViewCell.m */; };
+		D11A228A1EB7434D00D2FB80 /* WHNearStoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D11A22891EB7434D00D2FB80 /* WHNearStoreViewController.m */; };
 		D11C7C7C1EB1D4E700CE63E8 /* AppDelegate+Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = D11C7C771EB1D4E700CE63E8 /* AppDelegate+Reachability.m */; };
 		D11C7C7D1EB1D4E700CE63E8 /* AppDelegate+UMengMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = D11C7C791EB1D4E700CE63E8 /* AppDelegate+UMengMessage.m */; };
 		D11C7C7E1EB1D4E700CE63E8 /* AppDelegate+UMengMobClick.m in Sources */ = {isa = PBXBuildFile; fileRef = D11C7C7B1EB1D4E700CE63E8 /* AppDelegate+UMengMobClick.m */; };
@@ -315,6 +316,8 @@
 		D11A226E1EB73A9100D2FB80 /* LotteryZoneDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LotteryZoneDetailTableViewCell.m; sourceTree = "<group>"; };
 		D11A226F1EB73A9100D2FB80 /* WHProFileTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHProFileTableViewCell.h; sourceTree = "<group>"; };
 		D11A22701EB73A9100D2FB80 /* WHProFileTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHProFileTableViewCell.m; sourceTree = "<group>"; };
+		D11A22881EB7434D00D2FB80 /* WHNearStoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHNearStoreViewController.h; sourceTree = "<group>"; };
+		D11A22891EB7434D00D2FB80 /* WHNearStoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHNearStoreViewController.m; sourceTree = "<group>"; };
 		D11C7C761EB1D4E700CE63E8 /* AppDelegate+Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Reachability.h"; sourceTree = "<group>"; };
 		D11C7C771EB1D4E700CE63E8 /* AppDelegate+Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Reachability.m"; sourceTree = "<group>"; };
 		D11C7C781EB1D4E700CE63E8 /* AppDelegate+UMengMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+UMengMessage.h"; sourceTree = "<group>"; };
@@ -694,6 +697,39 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		D11A22841EB7427F00D2FB80 /* LieoProjTwo */ = {
+			isa = PBXGroup;
+			children = (
+				D11A22851EB7429A00D2FB80 /* Controller */,
+				D11A22861EB7429A00D2FB80 /* Model */,
+				D11A22871EB7429A00D2FB80 /* View */,
+			);
+			path = LieoProjTwo;
+			sourceTree = "<group>";
+		};
+		D11A22851EB7429A00D2FB80 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D11A22881EB7434D00D2FB80 /* WHNearStoreViewController.h */,
+				D11A22891EB7434D00D2FB80 /* WHNearStoreViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D11A22861EB7429A00D2FB80 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D11A22871EB7429A00D2FB80 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		D11C7C751EB1D4BD00CE63E8 /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -1051,6 +1087,7 @@
 		D170AE891EB1BCA0003668C0 /* OC */ = {
 			isa = PBXGroup;
 			children = (
+				D11A22841EB7427F00D2FB80 /* LieoProjTwo */,
 				D11A22471EB73A9100D2FB80 /* LieoProjOne */,
 				D16562D71EB30B0B00D82438 /* ImageSource */,
 				D11C7C821EB1D91D00CE63E8 /* NetTools */,
@@ -1493,6 +1530,7 @@
 				D11C7C8E1EB1DA5800CE63E8 /* webViewController.m in Sources */,
 				D11A22801EB73A9100D2FB80 /* WHDataModel.m in Sources */,
 				D11C7C7C1EB1D4E700CE63E8 /* AppDelegate+Reachability.m in Sources */,
+				D11A228A1EB7434D00D2FB80 /* WHNearStoreViewController.m in Sources */,
 				D170AEB61EB1D1D2003668C0 /* UIView+ScottAlertView.m in Sources */,
 				D19C3E921EB4A597006E541D /* HMScannerViewController.m in Sources */,
 				D170AEB11EB1D1D2003668C0 /* ScottDropDownAnimation.m in Sources */,
@@ -1657,7 +1695,7 @@
 				INFOPLIST_FILE = WHBasicProj/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lieo.WHBasicProj;
+				PRODUCT_BUNDLE_IDENTIFIER = two.lieo.WHBasicProj;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1673,7 +1711,7 @@
 				INFOPLIST_FILE = WHBasicProj/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lieo.WHBasicProj;
+				PRODUCT_BUNDLE_IDENTIFIER = two.lieo.WHBasicProj;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

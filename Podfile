@@ -27,5 +27,6 @@ pod 'ShareSDK3/ShareSDKPlatforms/SinaWeibo'
 pod 'ShareSDK3/ShareSDKPlatforms/WeChat'
 pod 'ShareSDK3/ShareSDKExtension'
 
+pod 'AMapLocation-NO-IDFA'
 
 end
