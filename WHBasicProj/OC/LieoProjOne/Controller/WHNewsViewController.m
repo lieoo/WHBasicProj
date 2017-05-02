@@ -17,6 +17,8 @@
 #import "GuessNumberViewController.h"
 #import "WHSixWebViewDetailController.h"
 #import "LotteryZoneViewController.h"
+#import "DHGuidePageHUD.h"
+
 @interface WHNewsViewController ()<UITableViewDelegate,UITableViewDataSource,SDCycleScrollViewDelegate>
 @property (nonatomic,strong)SDCycleScrollView *cycleScrollView;
 
@@ -47,9 +49,21 @@
     [self setUpNetRequest];
     [self setUpNavButton];
     
-//    [self setUpBanner];
-    
-   }
+//    if (![[NSUserDefaults standardUserDefaults] boolForKey:BOOLFORKEY]) {
+//        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:BOOLFORKEY];
+        [self setStaticGuidePage];
+//    }
+}
+
+
+- (void)setStaticGuidePage {
+    NSArray *imageNameArray = @[@"01",@"02",@"03",@"04"];
+    DHGuidePageHUD *guidePage = [[DHGuidePageHUD alloc] dh_initWithFrame:self.view.frame imageNameArray:imageNameArray buttonIsHidden:YES];
+    guidePage.slideInto = YES;
+    [[UIApplication sharedApplication].keyWindow addSubview:guidePage];
+}
+
+
 -(void)touchButton:(UIButton *)sender{
     NSLog(@"%ld",(long)sender.tag);
     if (sender.tag == 0) {

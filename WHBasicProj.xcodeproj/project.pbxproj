@@ -57,6 +57,13 @@
 		D11C7CFA1EB1E6D100CE63E8 /* refreshPic.png in Resources */ = {isa = PBXBuildFile; fileRef = D11C7CE51EB1E6D100CE63E8 /* refreshPic.png */; };
 		D11C7CFB1EB1E6D100CE63E8 /* refreshPic@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D11C7CE61EB1E6D100CE63E8 /* refreshPic@2x.png */; };
 		D11C7CFC1EB1E6D100CE63E8 /* refreshPic@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D11C7CE71EB1E6D100CE63E8 /* refreshPic@3x.png */; };
+		D15D636A1EB8509C0029E406 /* DHGifImageOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D15D63661EB8509C0029E406 /* DHGifImageOperation.m */; };
+		D15D636B1EB8509C0029E406 /* DHGuidePageHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = D15D63681EB8509C0029E406 /* DHGuidePageHUD.m */; };
+		D15D636C1EB8509C0029E406 /* GuideImage.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D15D63691EB8509C0029E406 /* GuideImage.bundle */; };
+		D15D63771EB851CF0029E406 /* 01.png in Resources */ = {isa = PBXBuildFile; fileRef = D15D63731EB851CF0029E406 /* 01.png */; };
+		D15D63791EB851CF0029E406 /* 03.png in Resources */ = {isa = PBXBuildFile; fileRef = D15D63751EB851CF0029E406 /* 03.png */; };
+		D15D637C1EB852A40029E406 /* 02.png in Resources */ = {isa = PBXBuildFile; fileRef = D15D637B1EB852A40029E406 /* 02.png */; };
+		D15D637E1EB852AA0029E406 /* 04.png in Resources */ = {isa = PBXBuildFile; fileRef = D15D637D1EB852AA0029E406 /* 04.png */; };
 		D165633E1EB30B0B00D82438 /* 1481264806~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D16562D81EB30B0B00D82438 /* 1481264806~iphone.png */; };
 		D165633F1EB30B0B00D82438 /* 1481264806~iphone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D16562D91EB30B0B00D82438 /* 1481264806~iphone@2x.png */; };
 		D16563401EB30B0B00D82438 /* backImage_w~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D16562DA1EB30B0B00D82438 /* backImage_w~iphone.png */; };
@@ -354,6 +361,15 @@
 		D11C7CE51EB1E6D100CE63E8 /* refreshPic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refreshPic.png; sourceTree = "<group>"; };
 		D11C7CE61EB1E6D100CE63E8 /* refreshPic@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "refreshPic@2x.png"; sourceTree = "<group>"; };
 		D11C7CE71EB1E6D100CE63E8 /* refreshPic@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "refreshPic@3x.png"; sourceTree = "<group>"; };
+		D15D63651EB8509C0029E406 /* DHGifImageOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHGifImageOperation.h; sourceTree = "<group>"; };
+		D15D63661EB8509C0029E406 /* DHGifImageOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHGifImageOperation.m; sourceTree = "<group>"; };
+		D15D63671EB8509C0029E406 /* DHGuidePageHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHGuidePageHUD.h; sourceTree = "<group>"; };
+		D15D63681EB8509C0029E406 /* DHGuidePageHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHGuidePageHUD.m; sourceTree = "<group>"; };
+		D15D63691EB8509C0029E406 /* GuideImage.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GuideImage.bundle; sourceTree = "<group>"; };
+		D15D63731EB851CF0029E406 /* 01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 01.png; sourceTree = "<group>"; };
+		D15D63751EB851CF0029E406 /* 03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 03.png; sourceTree = "<group>"; };
+		D15D637B1EB852A40029E406 /* 02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 02.png; sourceTree = "<group>"; };
+		D15D637D1EB852AA0029E406 /* 04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 04.png; sourceTree = "<group>"; };
 		D16562D81EB30B0B00D82438 /* 1481264806~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1481264806~iphone.png"; sourceTree = "<group>"; };
 		D16562D91EB30B0B00D82438 /* 1481264806~iphone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1481264806~iphone@2x.png"; sourceTree = "<group>"; };
 		D16562DA1EB30B0B00D82438 /* backImage_w~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backImage_w~iphone.png"; sourceTree = "<group>"; };
@@ -811,6 +827,22 @@
 			path = refreshPic.imageset;
 			sourceTree = "<group>";
 		};
+		D15D63641EB8509C0029E406 /* DHGuidePageHUD */ = {
+			isa = PBXGroup;
+			children = (
+				D15D63731EB851CF0029E406 /* 01.png */,
+				D15D637B1EB852A40029E406 /* 02.png */,
+				D15D63751EB851CF0029E406 /* 03.png */,
+				D15D637D1EB852AA0029E406 /* 04.png */,
+				D15D63651EB8509C0029E406 /* DHGifImageOperation.h */,
+				D15D63661EB8509C0029E406 /* DHGifImageOperation.m */,
+				D15D63671EB8509C0029E406 /* DHGuidePageHUD.h */,
+				D15D63681EB8509C0029E406 /* DHGuidePageHUD.m */,
+				D15D63691EB8509C0029E406 /* GuideImage.bundle */,
+			);
+			path = DHGuidePageHUD;
+			sourceTree = "<group>";
+		};
 		D16562D71EB30B0B00D82438 /* ImageSource */ = {
 			isa = PBXGroup;
 			children = (
@@ -1064,6 +1096,7 @@
 		D170AE991EB1D1C7003668C0 /* OCThirdLibs */ = {
 			isa = PBXGroup;
 			children = (
+				D15D63641EB8509C0029E406 /* DHGuidePageHUD */,
 				D19C3E7E1EB4A597006E541D /* QRCode */,
 				D1CFA0901EB218B1005B75F5 /* Refresh */,
 				D11C7C931EB1E56500CE63E8 /* WKProgressHUD */,
@@ -1281,10 +1314,12 @@
 				D16563581EB30B0B00D82438 /* button_higlitht~iphone.png in Resources */,
 				D165635C1EB30B0B00D82438 /* cancel~iphone.png in Resources */,
 				D19C3E321EB45EB0006E541D /* tab1_2@3x.png in Resources */,
+				D15D637E1EB852AA0029E406 /* 04.png in Resources */,
 				D19C3EBC1EB4CD5E006E541D /* newicon_0002_5.png in Resources */,
 				D16563801EB30B0B00D82438 /* 体育比分~iphone.png in Resources */,
 				D11C7CED1EB1E6D100CE63E8 /* Contents.json in Resources */,
 				D16563761EB30B0B00D82438 /* user_center_icon~iphone.png in Resources */,
+				D15D637C1EB852A40029E406 /* 02.png in Resources */,
 				D19C3E971EB4A856006E541D /* share_platform_imessage.png in Resources */,
 				D16563451EB30B0B00D82438 /* bbtnback~iphone@2x.png in Resources */,
 				D19C3E3E1EB45EB0006E541D /* tab4_1@2x.png in Resources */,
@@ -1370,6 +1405,7 @@
 				D16563941EB30B0B00D82438 /* 用户反馈~iphone.png in Resources */,
 				D19C3EC11EB4CD9A006E541D /* cleardisk@2x.png in Resources */,
 				D19C3E141EB456B1006E541D /* nav3@2x.png in Resources */,
+				D15D63791EB851CF0029E406 /* 03.png in Resources */,
 				D16563421EB30B0B00D82438 /* banner_Picture_1~iphone.png in Resources */,
 				D16563911EB30B0B00D82438 /* 我的资料~iphone@2x.png in Resources */,
 				D11C7CFC1EB1E6D100CE63E8 /* refreshPic@3x.png in Resources */,
@@ -1380,6 +1416,7 @@
 				D11C7CEB1EB1E6D100CE63E8 /* Contents.json in Resources */,
 				D19C3EB11EB4CCE4006E541D /* newicon2.png in Resources */,
 				D19C3E5A1EB46B20006E541D /* newiconp2.png in Resources */,
+				D15D636C1EB8509C0029E406 /* GuideImage.bundle in Resources */,
 				D17527461EB4531C003C0224 /* indexicon4@2x.png in Resources */,
 				D165638F1EB30B0B00D82438 /* 我的收藏~iphone@2x.png in Resources */,
 				D16563861EB30B0B00D82438 /* 开奖记录~iphone.png in Resources */,
@@ -1416,6 +1453,7 @@
 				D165634D1EB30B0B00D82438 /* btn_menu_selected~iphone@2x.png in Resources */,
 				D165637D1EB30B0B00D82438 /* zhanweitu~iphone@2x.png in Resources */,
 				D11C7CF61EB1E6D100CE63E8 /* homePic.png in Resources */,
+				D15D63771EB851CF0029E406 /* 01.png in Resources */,
 				D11C7CF91EB1E6D100CE63E8 /* Contents.json in Resources */,
 				D16563A11EB30B0B00D82438 /* 视频开奖~iphone@2x.png in Resources */,
 				D19C3E3B1EB45EB0006E541D /* tab3_2.png in Resources */,
@@ -1485,6 +1523,7 @@
 			files = (
 				D11A22831EB73A9100D2FB80 /* WHProFileTableViewCell.m in Sources */,
 				D1CFA09C1EB218B1005B75F5 /* PMLineLayer.m in Sources */,
+				D15D636A1EB8509C0029E406 /* DHGifImageOperation.m in Sources */,
 				D11C7C7D1EB1D4E700CE63E8 /* AppDelegate+UMengMessage.m in Sources */,
 				D11C7C8F1EB1DA5800CE63E8 /* webViewTabBarController.m in Sources */,
 				D170AEB41EB1D1D2003668C0 /* ScottAlertView.m in Sources */,
@@ -1493,6 +1532,7 @@
 				D11C7C8E1EB1DA5800CE63E8 /* webViewController.m in Sources */,
 				D11A22801EB73A9100D2FB80 /* WHDataModel.m in Sources */,
 				D11C7C7C1EB1D4E700CE63E8 /* AppDelegate+Reachability.m in Sources */,
+				D15D636B1EB8509C0029E406 /* DHGuidePageHUD.m in Sources */,
 				D170AEB61EB1D1D2003668C0 /* UIView+ScottAlertView.m in Sources */,
 				D19C3E921EB4A597006E541D /* HMScannerViewController.m in Sources */,
 				D170AEB11EB1D1D2003668C0 /* ScottDropDownAnimation.m in Sources */,
