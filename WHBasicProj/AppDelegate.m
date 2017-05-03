@@ -15,6 +15,12 @@
 #import "PXGetDataTool.h"
 #import "webViewTabBarController.h"
 
+
+
+#define WHCELLUARNETWORKONLINENOTICESTRING @"WHCELLUARNETWORKONLINE"
+#define WHWIFINETWORKIONLINENOTICESTRING @"WHWIFINETWORKIONLINE"
+#define WHNONETWORKNOTICESTRING @"WHNONETWORK"
+
 @interface AppDelegate ()
 
 @property (nonatomic,strong) ScottAlertViewController *alertCon;

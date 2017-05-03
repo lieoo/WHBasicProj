@@ -481,8 +481,8 @@
 		D170AE7D1EB1B2B8003668C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D170AE7F1EB1B2B8003668C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D170AE881EB1B8A6003668C0 /* WHProjHeaderPCH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHProjHeaderPCH.h; sourceTree = "<group>"; };
-		D170AE8A1EB1BCBE003668C0 /* WHTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHTabBarController.h; sourceTree = "<group>"; };
-		D170AE8B1EB1BCBE003668C0 /* WHTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHTabBarController.m; sourceTree = "<group>"; };
+		D170AE8A1EB1BCBE003668C0 /* WHTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WHTabBarController.h; path = ../WHTabBarController.h; sourceTree = "<group>"; };
+		D170AE8B1EB1BCBE003668C0 /* WHTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WHTabBarController.m; path = ../WHTabBarController.m; sourceTree = "<group>"; };
 		D170AE9C1EB1D1D2003668C0 /* ScottBaseAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScottBaseAnimation.h; sourceTree = "<group>"; };
 		D170AE9D1EB1D1D2003668C0 /* ScottBaseAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScottBaseAnimation.m; sourceTree = "<group>"; };
 		D170AE9E1EB1D1D2003668C0 /* ScottDropDownAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScottDropDownAnimation.h; sourceTree = "<group>"; };
@@ -721,6 +721,8 @@
 				D11C7C791EB1D4E700CE63E8 /* AppDelegate+UMengMessage.m */,
 				D11C7C7A1EB1D4E700CE63E8 /* AppDelegate+UMengMobClick.h */,
 				D11C7C7B1EB1D4E700CE63E8 /* AppDelegate+UMengMobClick.m */,
+				D170AE8A1EB1BCBE003668C0 /* WHTabBarController.h */,
+				D170AE8B1EB1BCBE003668C0 /* WHTabBarController.m */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -1087,8 +1089,6 @@
 				D16562D71EB30B0B00D82438 /* ImageSource */,
 				D11C7C821EB1D91D00CE63E8 /* NetTools */,
 				D11C7C751EB1D4BD00CE63E8 /* AppDelegate */,
-				D170AE8A1EB1BCBE003668C0 /* WHTabBarController.h */,
-				D170AE8B1EB1BCBE003668C0 /* WHTabBarController.m */,
 			);
 			path = OC;
 			sourceTree = "<group>";
