@@ -1,0 +1,15 @@
+PODS:
+  - KVNProgress (2.3.1)
+  - UMengAnalytics-NO-IDFA (4.2.5)
+
+DEPENDENCIES:
+  - KVNProgress
+  - UMengAnalytics-NO-IDFA
+
+SPEC CHECKSUMS:
+  KVNProgress: 8167b1f19e2758290c0b6143020ed9dcbb0477a1
+  UMengAnalytics-NO-IDFA: 16666e32edce5be44ae5b14aaaa7f3582e09d6ab
+
+PODFILE CHECKSUM: 49ea3a56d92caab36c376ce16f97e541bf941ca0
+
+COCOAPODS: 1.2.1
