@@ -1,0 +1,94 @@
+{
+	ad = (
+		{
+			img = "http://mapi.159cai.com/uploads/170405/2-1F40514420JF.png";
+			url = "http://m.159cai.com/news/new170405.html";
+		},
+		{
+			img = "http://mapi.159cai.com/uploads/170405/2-1F405144013b3.jpg";
+			url = "http://m.159cai.com/news/new1704051.html";
+		},
+	);
+	content = (
+		{
+			cid = 2;
+			href = "http://www.wm007.com/plugin.php?id=nba_score";
+			icon = "";
+			id = 6;
+			img = "nav/2016-11-21/5832bb6c98787.jpg";
+			label = "\U5f69\U7968\U8bba\U575b";
+			listorder = 0;
+			parentid = 0;
+			path = "0-6";
+			status = 1;
+			target = "";
+		},
+		{
+			cid = 2;
+			href = "http://m.pc80888.com";
+			icon = "";
+			id = 7;
+			img = "";
+			label = "\U6295\U6ce8\U7ad9";
+			listorder = 0;
+			parentid = 0;
+			path = "0-7";
+			status = 1;
+			target = "";
+		},
+		{
+			cid = 2;
+			href = "";
+			icon = "";
+			id = 8;
+			img = "";
+			label = "\U7279\U522b\U53f7\U5206\U6790";
+			listorder = 0;
+			parentid = 0;
+			path = "0-8";
+			status = 1;
+			target = "<null>";
+		},
+		{
+			cid = 2;
+			href = "";
+			icon = "";
+			id = 9;
+			img = "";
+			label = "\U5f69\U7968\U5927\U5385";
+			listorder = 0;
+			parentid = 0;
+			path = "0-9";
+			status = 1;
+			target = "<null>";
+		},
+		{
+			cid = 2;
+			href = "";
+			icon = "";
+			id = 11;
+			img = "";
+			label = "\U4f53\U80b2\U6bd4\U5206";
+			listorder = 0;
+			parentid = 1;
+			path = "0-11\n\n                   \n";
+			status = 1;
+			target = "<null>";
+		},
+		{
+			cid = 2;
+			href = "http://www.wm007.com/plugin.php?id=nba_score";
+			icon = "";
+			id = 6;
+			img = "\U5f69\U7968\U8d44\U8baf";
+			label = "\U5f69\U7968\U8d44\U8baf";
+			listorder = 0;
+			parentid = 0;
+			path = "0-6";
+			status = 1;
+			target = "";
+		},
+	);
+	info = "\U64cd\U4f5c\U6210\U529f!";
+	status = 1;
+}
